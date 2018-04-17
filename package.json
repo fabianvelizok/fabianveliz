@@ -1,0 +1,12 @@
+{
+  "name": "fabianveliz",
+  "version": "0.1.0",
+  "description": "My personal website",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabianvelizok/fabianveliz.git"
+  },
+  "author": "Fabián Veliz <velizfabianhoracio@gmail.com>",
+  "license": "MIT"
+}
