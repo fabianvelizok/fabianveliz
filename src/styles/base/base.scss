@@ -1,0 +1,11 @@
+body {
+  font-family: $main-font;
+  padding: 5rem 1rem;
+  text-align: center;
+  color: $white;
+  background-image: linear-gradient(to right, #2b5876 0%, #4e4376 100%);
+}
+
+* {
+  box-sizing: border-box;
+}

@@ -1,0 +1,32 @@
+@import '../common.scss';
+
+.home {
+  @at-root &__title {
+    font-size: 3rem;
+  }
+
+  @at-root &__welcome {
+    font-size: 2rem;
+  }
+
+  @at-root &__thanks {
+    font-size: 1.5rem;
+    color: #f8ffab;
+  }
+
+  @at-root &__links {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+
+    .list-item {
+      padding: 20px;
+      display: inline-block;
+    }
+
+    .list-item .icon {
+      color: $white;
+      font-size: 3rem;
+    }
+  }
+}
