@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start -p $PORT",
+    "heroku-postbuild": "yarn build"
   },
   "repository": "git+https://github.com/fabianvelizok/fabianveliz.git",
   "author": "Fabián Veliz <velizfabianhoracio@gmail.com>",
