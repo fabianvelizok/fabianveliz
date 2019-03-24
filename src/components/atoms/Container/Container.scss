@@ -1,0 +1,10 @@
+@import '../../../styles/common.scss';
+
+.container {
+  margin: auto;
+  max-width: 1280px;
+  padding: {
+    left: $spacing-16;
+    right: $spacing-16;
+  }
+}

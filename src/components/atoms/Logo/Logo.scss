@@ -1,0 +1,11 @@
+@import '../../../styles/common.scss';
+
+.logo {
+  color: $white;
+  display: block;
+  font-size: 2rem;
+  padding: {
+    bottom: $spacing-8;
+    top: $spacing-8;
+  }
+}

@@ -1,14 +1,28 @@
 import Head from 'next/head';
+import PropTypes from 'prop-types';
 import React from 'react';
 
 const MetaTags = props => {
-  const { title } = props;
+  const { children, title } = props;
 
+  // TODO: Add SEO tags.
   return (
     <Head>
       <title>{title} | Fabián Veliz</title>
+
+      {children}
     </Head>
   );
+};
+
+MetaTags.propTypes = {
+  children: PropTypes.node,
+  title: PropTypes.string
+};
+
+MetaTags.defaultProps = {
+  children: undefined,
+  title: undefined
 };
 
 export default MetaTags;

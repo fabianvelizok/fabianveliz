@@ -1,32 +1,40 @@
+import { pickHTMLProps } from 'pick-react-known-prop';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
 import React from 'react';
 
-import Main from 'Components/templates/main';
-import SocialLinks from 'Components/atoms/SocialLinks/SocialLinks';
+import Container from 'Components/atoms/Container/Container';
+import Hero from 'Components/atoms/Hero/Hero';
+import Main from 'Components/templates/Main/Main';
 import MetaTags from 'Components/atoms/MetaTags/MetaTags';
+import SocialLinks from 'Components/atoms/SocialLinks/SocialLinks';
 
 import 'Styles/pages/home.scss';
 
-const Home = () => {
+const Home = props => {
+  const { className, ...rest } = props;
+
+  const classes = classNames(['home', className]);
+
   return (
-    <Main>
+    <Main className={classes} {...pickHTMLProps(rest)}>
       <MetaTags title="Home" />
 
-      <div className="home">
-        <p className="home__welcome">
-          Hi! I am currently working on my website. BTW, thanks for visiting it
-          <span role="img" aria-label="smile">
-            &#x1F600;
-          </span>
-          <br />
-          I will have updates soon!
-        </p>
-
-        <p className="home__thanks">Thanks!</p>
+      <Container>
+        <Hero className="home__hero" />
 
         <SocialLinks />
-      </div>
+      </Container>
     </Main>
   );
+};
+
+Home.propTypes = {
+  className: PropTypes.string
+};
+
+Home.defaultProps = {
+  className: undefined
 };
 
 export default Home;

@@ -14,8 +14,10 @@
   "license": "MIT",
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
+    "classnames": "^2.2.6",
     "next": "^8.0.3",
     "node-sass": "^4.11.0",
+    "pick-react-known-prop": "^0.1.5",
     "react": "^16.8.5",
     "react-dom": "^16.8.5"
   },

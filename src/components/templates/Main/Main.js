@@ -1,18 +1,28 @@
+import { pickHTMLProps } from 'pick-react-known-prop';
+import classNames from 'classnames';
 import Head from 'next/head';
 import PropTypes from 'prop-types';
-import React, { Fragment } from 'react';
+import React from 'react';
+
+import Header from 'Components/organisms/Header/Header';
+import Footer from 'Components/organisms/Footer/Footer';
+
+import './Main.scss';
 
 const Main = props => {
-  const { children } = props;
+  const { className, children, ...rest } = props;
+
+  const classes = classNames(['main', className]);
 
   return (
-    <Fragment>
-      {/* TODO: Load fonts locally or by javascript */}
+    <div className={classes} {...pickHTMLProps(rest)}>
+      {/* TODO: Load fonts locally or using javascript */}
       <Head>
         <link
           href="https://fonts.googleapis.com/css?family=Ubuntu"
           rel="stylesheet"
         />
+
         <link
           rel="stylesheet"
           href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
@@ -21,8 +31,12 @@ const Main = props => {
         />
       </Head>
 
-      <main>{children}</main>
-    </Fragment>
+      <Header />
+
+      <main className="main__content">{children}</main>
+
+      <Footer />
+    </div>
   );
 };
 

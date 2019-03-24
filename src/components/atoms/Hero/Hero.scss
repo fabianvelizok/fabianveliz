@@ -1,0 +1,16 @@
+@import '../../../styles/common.scss';
+
+.hero {
+  &__title {
+    font-size: 3rem;
+  }
+
+  &__welcome {
+    font-size: 2rem;
+  }
+
+  &__thanks {
+    font-size: 1.5rem;
+    color: #f8ffab;
+  }
+}

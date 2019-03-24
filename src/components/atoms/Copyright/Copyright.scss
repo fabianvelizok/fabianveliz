@@ -1,0 +1,9 @@
+@import '../../../styles/common.scss';
+
+.copyright {
+  color: $white;
+  padding: {
+    bottom: $spacing-4;
+    top: $spacing-4;
+  }
+}

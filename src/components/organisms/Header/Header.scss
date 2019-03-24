@@ -1,0 +1,9 @@
+@import '../../../styles/common.scss';
+
+.header {
+  &__content {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+}
