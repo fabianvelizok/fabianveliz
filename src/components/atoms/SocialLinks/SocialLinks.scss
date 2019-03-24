@@ -1,0 +1,17 @@
+@import '../../../styles/common.scss';
+
+.social-links {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+
+  &__list-item {
+    padding: 20px;
+    display: inline-block;
+  }
+
+  &__icon {
+    color: $white;
+    font-size: 3rem;
+  }
+}

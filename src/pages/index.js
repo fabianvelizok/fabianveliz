@@ -1,14 +1,17 @@
 import React from 'react';
-import Head from 'next/head';
+
+// TODO: Add aliases to webpack config.
 import Main from '../components/templates/main';
+import SocialLinks from '../components/atoms/SocialLinks/SocialLinks';
+import MetaTags from '../components/atoms/MetaTags/MetaTags';
+
 import '../styles/pages/home.scss';
 
-const Home = () => (
-  <div>
-    <Head>
-      <title>FV | Home</title>
-    </Head>
+const Home = () => {
+  return (
     <Main>
+      <MetaTags title="Home" />
+
       <div className="home">
         <p className="home__welcome">
           Hi! I am currently working on my website. BTW, thanks for visiting it
@@ -21,38 +24,10 @@ const Home = () => (
 
         <p className="home__thanks">Thanks!</p>
 
-        <ul className="home__links">
-          <li className="list-item">
-            <a
-              href="https://goo.gl/bssTti"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="icon fab fa-linkedin" />
-            </a>
-          </li>
-          <li className="list-item">
-            <a
-              href="https://goo.gl/9JFzLu"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="icon fab fa-twitter-square" />
-            </a>
-          </li>
-          <li className="list-item">
-            <a
-              href="https://goo.gl/1CGnKQ"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="icon fab fa-github-square" />
-            </a>
-          </li>
-        </ul>
+        <SocialLinks />
       </div>
     </Main>
-  </div>
-);
+  );
+};
 
 export default Home;
