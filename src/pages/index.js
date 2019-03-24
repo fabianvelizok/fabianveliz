@@ -1,11 +1,10 @@
 import React from 'react';
 
-// TODO: Add aliases to webpack config.
-import Main from '../components/templates/main';
-import SocialLinks from '../components/atoms/SocialLinks/SocialLinks';
-import MetaTags from '../components/atoms/MetaTags/MetaTags';
+import Main from 'Components/templates/main';
+import SocialLinks from 'Components/atoms/SocialLinks/SocialLinks';
+import MetaTags from 'Components/atoms/MetaTags/MetaTags';
 
-import '../styles/pages/home.scss';
+import 'Styles/pages/home.scss';
 
 const Home = () => {
   return (

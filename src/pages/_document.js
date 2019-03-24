@@ -1,18 +1,28 @@
 import React from 'react';
-import Document, { Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript } from 'next/document';
 
-export default class MyDocument extends Document {
+class MyDocument extends Document {
+  static async getInitialProps(ctx) {
+    const initialProps = await Document.getInitialProps(ctx);
+    return { ...initialProps };
+  }
+
   render() {
     return (
-      <html>
+      <Html>
         <Head>
-          <link rel="stylesheet" href="/_next/static/style.css" />
+          <meta
+            content="width=device-width, initial-scale=1.0"
+            name="viewport"
+          />
         </Head>
-        <body>
+        <body className="custom_class">
           <Main />
           <NextScript />
         </body>
-      </html>
+      </Html>
     );
   }
 }
+
+export default MyDocument;
