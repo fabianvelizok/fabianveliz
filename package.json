@@ -13,11 +13,11 @@
   "author": "Fabián Veliz <velizfabianhoracio@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@zeit/next-sass": "^0.2.0",
-    "next": "^6.0.3",
-    "node-sass": "^4.9.0",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1"
+    "@zeit/next-sass": "^1.0.1",
+    "next": "^8.0.3",
+    "node-sass": "^4.11.0",
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
