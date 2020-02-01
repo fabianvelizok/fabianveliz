@@ -18,22 +18,27 @@ const SocialLinks = props => {
   return (
     <ul className={classes} {...pickHTMLProps(rest)}>
       <li className="social-links__list-item">
-        <a href="https://www.linkedin.com/in/velizfabianhoracio/" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://www.linkedin.com/in/velizfabianhoracio/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Linkedin"
+        >
           <Linkedin className="social-links__icon" />
         </a>
       </li>
       <li className="social-links__list-item">
-        <a href="https://github.com/fabianvelizok" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/fabianvelizok" target="_blank" rel="noopener noreferrer" aria-label="Github">
           <Github className="social-links__icon" />
         </a>
       </li>
       <li className="social-links__list-item">
-        <a href="https://twitter.com/fabianvelizok" target="_blank" rel="noopener noreferrer">
+        <a href="https://twitter.com/fabianvelizok" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
           <Twitter className="social-links__icon" />
         </a>
       </li>
       <li className="social-links__list-item">
-        <a href="mailto:velizfabianhoracio@gmail.com">
+        <a href="mailto:velizfabianhoracio@gmail.com" aria-label="Email">
           <Email className="social-links__icon" />
         </a>
       </li>

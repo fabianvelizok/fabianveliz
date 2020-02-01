@@ -1,4 +1,4 @@
-@import '../../../styles/common.scss';
+@import '../../../styles/variables.scss';
 
 .navbar {
   &__list {
@@ -16,11 +16,11 @@
     &--hidden {
       display: none;
     }
-  }
 
-  &__list-item--with-effect {
-    transform: scale(1);
-    animation: pulse 1.5s infinite;
+    &--with-effect {
+      transform: scale(1);
+      animation: pulse 1.5s infinite;
+    }
   }
 
   &__list-link {

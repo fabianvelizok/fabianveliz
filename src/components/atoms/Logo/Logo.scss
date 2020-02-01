@@ -1,11 +1,11 @@
-@import '../../../styles/common.scss';
+@import '../../../styles/variables.scss';
 
 .logo {
   display: block;
   font-size: 2rem;
   padding: {
-    bottom: $spacing-8;
-    top: $spacing-8;
+    bottom: 0.5rem;
+    top: 0.5rem;
   }
   text-decoration: none;
 

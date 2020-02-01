@@ -9,14 +9,12 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang="en">
         <Head>
-          <meta
-            content="width=device-width, initial-scale=1.0"
-            name="viewport"
-          />
+          <meta content="width=device-width, initial-scale=1.0" name="viewport" />
         </Head>
-        <body className="custom_class">
+
+        <body>
           <Main />
           <NextScript />
         </body>

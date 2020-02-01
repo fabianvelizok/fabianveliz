@@ -10,6 +10,8 @@ const MetaTags = props => {
     <Head>
       <title>{title} | Fabián Veliz</title>
 
+      <meta name="description" content="Fabián Horacio Veliz' personal website" />
+
       {children}
     </Head>
   );
@@ -17,12 +19,12 @@ const MetaTags = props => {
 
 MetaTags.propTypes = {
   children: PropTypes.node,
-  title: PropTypes.string
+  title: PropTypes.string,
 };
 
 MetaTags.defaultProps = {
   children: undefined,
-  title: undefined
+  title: undefined,
 };
 
 export default MetaTags;

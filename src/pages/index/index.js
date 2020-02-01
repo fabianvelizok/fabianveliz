@@ -7,7 +7,8 @@ import Hero from 'Components/atoms/Hero/Hero';
 import Main from 'Components/templates/Main/Main';
 import MetaTags from 'Components/atoms/MetaTags/MetaTags';
 
-import 'Styles/pages/home.scss';
+import './index.scss';
+// import '../_document.scss';
 
 const Home = props => {
   const { className, ...rest } = props;

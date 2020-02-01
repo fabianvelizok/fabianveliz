@@ -1,4 +1,4 @@
-@import '../../../styles/common.scss';
+@import '../../../styles/variables.scss';
 
 $size-photo: 150px;
 
@@ -25,14 +25,13 @@ $size-photo: 150px;
   }
 
   &__about,
-  &__photo, {
+  &__photo {
     margin-bottom: 2rem;
   }
-  
+
   &__about-information {
     text-align: left;
     margin-right: 2rem;
-    font-size: 0.875rem;
 
     p {
       margin-top: 0.5rem;
