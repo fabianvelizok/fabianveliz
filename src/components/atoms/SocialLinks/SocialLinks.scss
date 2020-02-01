@@ -1,17 +1,20 @@
 @import '../../../styles/common.scss';
 
 .social-links {
-  padding: 0;
+  background-color: #63b7af;
+  border-radius: 2rem;
+  display: inline-flex;
   list-style: none;
-  text-align: center;
+  margin: 0;
+  padding: 0;
 
   &__list-item {
-    padding: 20px;
-    display: inline-block;
+    margin: 0.5rem;
   }
 
   &__icon {
-    color: $white;
-    font-size: 3rem;
+    fill: $white;
+    width: 2rem;
+    height: 2rem;
   }
 }

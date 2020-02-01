@@ -1,11 +1,19 @@
 @import '../../../styles/common.scss';
 
 .logo {
-  color: $white;
   display: block;
   font-size: 2rem;
   padding: {
     bottom: $spacing-8;
     top: $spacing-8;
+  }
+  text-decoration: none;
+
+  &__caret {
+    color: $white;
+  }
+
+  &__name {
+    color: #ee8572;
   }
 }

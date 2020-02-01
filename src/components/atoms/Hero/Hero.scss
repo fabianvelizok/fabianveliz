@@ -1,16 +1,49 @@
 @import '../../../styles/common.scss';
 
+$size-photo: 150px;
+
 .hero {
-  &__title {
-    font-size: 3rem;
+  position: relative;
+  background-color: $pickled-bluewood;
+  text-align: center;
+
+  &__particles {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 
-  &__welcome {
-    font-size: 2rem;
+  &__container {
+    position: relative;
+    z-index: 1;
   }
 
-  &__thanks {
-    font-size: 1.5rem;
-    color: #f8ffab;
+  &__about {
+    display: flex;
+  }
+
+  &__about,
+  &__photo, {
+    margin-bottom: 2rem;
+  }
+  
+  &__about-information {
+    text-align: left;
+    margin-right: 2rem;
+    font-size: 0.875rem;
+
+    p {
+      margin-top: 0.5rem;
+      margin-bottom: 0;
+    }
+  }
+
+  &__photo {
+    width: $size-photo;
+    height: $size-photo;
+    border-radius: $size-photo;
+    border: 5px solid $cyprus;
   }
 }

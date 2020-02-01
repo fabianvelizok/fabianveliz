@@ -1,3 +1,5 @@
+@import '../../../styles/common.scss';
+
 .main {
   display: flex;
   flex-direction: column;
@@ -5,5 +7,7 @@
 
   &__content {
     flex: 1;
+    // TODO: Remove temporal style
+    background-color: $oracle;
   }
 }

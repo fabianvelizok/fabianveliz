@@ -18,17 +18,17 @@ const Copyright = props => {
       target="_blank"
       {...pickHTMLProps(rest)}
     >
-      © 2019 - Veliz Fabián Horacio
+      ©2020 - Veliz Fabián Horacio
     </a>
   );
 };
 
 Copyright.propTypes = {
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 Copyright.defaultProps = {
-  className: undefined
+  className: undefined,
 };
 
 export default Copyright;

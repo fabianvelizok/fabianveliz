@@ -13,7 +13,7 @@ const Navbar = props => {
   return (
     <nav className={classes} {...pickHTMLProps(rest)}>
       <ul className="navbar__list">
-        <li className="navbar__list-item">
+        <li className="navbar__list-item navbar__list-item--hidden">
           <a className="navbar__list-link" href="#hero">
             Home
           </a>
@@ -33,12 +33,9 @@ const Navbar = props => {
             Courses
           </a>
         </li>
-        <li className="navbar__list-item">
-          <a
-            className="navbar__list-link"
-            href="mailto:velizfabianhoracio@gmail.com"
-          >
-            Contact
+        <li className="navbar__list-item navbar__list-item--with-effect">
+          <a className="navbar__list-link" href="mailto:velizfabianhoracio@gmail.com">
+            Let's talk
           </a>
         </li>
       </ul>
@@ -47,11 +44,11 @@ const Navbar = props => {
 };
 
 Navbar.propTypes = {
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 Navbar.defaultProps = {
-  className: undefined
+  className: undefined,
 };
 
 export default Navbar;

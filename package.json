@@ -22,7 +22,8 @@
     "pick-react-known-prop": "^0.1.5",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-particles-js": "^2.7.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",

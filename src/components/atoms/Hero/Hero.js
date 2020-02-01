@@ -1,9 +1,51 @@
 import { pickHTMLProps } from 'pick-react-known-prop';
 import classNames from 'classnames';
+import Particles from 'react-particles-js';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import Container from 'Components/atoms/Container/Container';
+import SocialLinks from 'Components/atoms/SocialLinks/SocialLinks';
+
 import './Hero.scss';
+
+const particlesParams = {
+  particles: {
+    number: {
+      value: 72,
+      density: {
+        enable: true,
+        value_area: 800,
+      },
+    },
+    color: {
+      value: '#e68518',
+    },
+    shape: {
+      type: 'star',
+    },
+    opacity: {
+      value: 0.1,
+      random: false,
+      anim: {
+        enable: true,
+        speed: 1,
+        opacity_min: 0.1,
+        sync: false,
+      },
+    },
+    size: {
+      value: 4,
+      random: false,
+      anim: {
+        enable: false,
+        speed: 40,
+        size_min: 0.1,
+        sync: false,
+      },
+    },
+  },
+};
 
 const Hero = props => {
   const { className, ...rest } = props;
@@ -12,27 +54,41 @@ const Hero = props => {
 
   return (
     <div className={classes} id="#hero" {...pickHTMLProps(rest)}>
-      <p className="hero__welcome">
-        <span>
-          Hi! I am currently working on my website. BTW, thanks for visiting it{' '}
-        </span>
-        <span role="img" aria-label="smile">
-          &#x1F600;
-        </span>
-        <br />
-        I will have updates soon!
-      </p>
-      <p className="hero__thanks">Thanks!</p>
+      <Particles className="hero__particles" params={particlesParams} />
+
+      <Container className="hero__container">
+        <img className="hero__photo" src="https://avatars3.githubusercontent.com/u/5731909?s=460&v=4" alt="Me" />
+
+        <div className="hero__about">
+          <div className="hero__about-information">
+            <strong>About me</strong>
+            <p>
+              My name is Fabián Veliz and I am a Front-end developer with about 6 years of experience developing web applications. I have been
+              working on the front-end side using frameworks and libraries like React, Angular, Vue, etc. I am a
+              self-taught person although I resumed my university studies and I am currently coursing the system
+              engineer career.
+            </p>
+            <p>
+              I am a mentor. I helped coworkers to improve their soft and hard skills in order to grow and I am
+              currently training to be a gatekeeper.
+            </p>
+
+            <p>Do you want to know a little bit more? Let's talk.</p>
+          </div>
+        </div>
+
+        <SocialLinks />
+      </Container>
     </div>
   );
 };
 
 Hero.propTypes = {
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 Hero.defaultProps = {
-  className: undefined
+  className: undefined,
 };
 
 export default Hero;

@@ -3,11 +3,9 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Container from 'Components/atoms/Container/Container';
 import Hero from 'Components/atoms/Hero/Hero';
 import Main from 'Components/templates/Main/Main';
 import MetaTags from 'Components/atoms/MetaTags/MetaTags';
-import SocialLinks from 'Components/atoms/SocialLinks/SocialLinks';
 
 import 'Styles/pages/home.scss';
 
@@ -20,21 +18,30 @@ const Home = props => {
     <Main className={classes} {...pickHTMLProps(rest)}>
       <MetaTags title="Home" />
 
-      <Container>
-        <Hero className="home__hero" />
+      <Hero className="home__hero" />
 
-        <SocialLinks />
-      </Container>
+      {/* TODO: Remove temporal div */}
+      <div
+        style={{
+          padding: '3rem',
+          backgroundColor: '#347474',
+          textAlign: 'center',
+        }}
+      >
+        This site is under construction.
+        <br />
+        Updates are coming soon!
+      </div>
     </Main>
   );
 };
 
 Home.propTypes = {
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 Home.defaultProps = {
-  className: undefined
+  className: undefined,
 };
 
 export default Home;

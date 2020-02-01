@@ -12,17 +12,19 @@ const Logo = props => {
 
   return (
     <a href="/" className={classes} {...pickHTMLProps(rest)}>
-      {'{FV}'}
+      <span className="logo__caret">{'<'}</span>
+      <span className="logo__name">FV </span>
+      <span className="logo__caret">{'/>'}</span>
     </a>
   );
 };
 
 Logo.propTypes = {
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 Logo.defaultProps = {
-  className: undefined
+  className: undefined,
 };
 
 export default Logo;
