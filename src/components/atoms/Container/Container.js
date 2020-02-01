@@ -19,11 +19,11 @@ const Container = props => {
 
 Container.propTypes = {
   children: PropTypes.node.isRequired,
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 Container.defaultProps = {
-  className: undefined
+  className: undefined,
 };
 
 export default Container;

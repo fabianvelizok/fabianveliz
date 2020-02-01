@@ -1,9 +1,18 @@
 {
-  "extends": "react-app",
-  "plugins": [
-    "prettier"
-  ],
+  "parser": "babel-eslint",
+  "env": {
+    "node": true,
+    "browser": true,
+    "es6": true
+  },
+  "extends": ["airbnb", "prettier", "prettier/react"],
+  "plugins": ["react", "prettier"],
   "rules": {
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+
+    "react/jsx-filename-extension": 0,
+    "react/jsx-props-no-spreading": 0,
+
+    "import/no-unresolved": 0
   }
 }
