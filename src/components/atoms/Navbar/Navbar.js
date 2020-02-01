@@ -3,6 +3,8 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import Pulse from 'Components/atoms/Pulse/Pulse';
+
 import './Navbar.scss';
 
 const Navbar = props => {
@@ -33,9 +35,9 @@ const Navbar = props => {
             Courses
           </a>
         </li>
-        <li className="navbar__list-item navbar__list-item--with-effect">
+        <li className="navbar__list-item">
           <a className="navbar__list-link" href="mailto:velizfabianhoracio@gmail.com">
-            Let's talk
+            <Pulse>Let's talk</Pulse>
           </a>
         </li>
       </ul>

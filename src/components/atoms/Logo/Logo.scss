@@ -8,6 +8,7 @@
     top: 0.5rem;
   }
   text-decoration: none;
+  transition: font-size 0.5s ease-in-out;
 
   &__caret {
     color: $white;

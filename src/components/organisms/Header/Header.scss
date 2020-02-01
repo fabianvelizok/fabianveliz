@@ -6,10 +6,23 @@
   right: 0;
   top: 0;
   z-index: 99;
+  transition: background-color .5s;
 
   &__content {
     align-items: center;
     display: flex;
     justify-content: space-between;
+  }
+
+  &--black {
+    background-color: $cyprus;
+
+    .navbar__list-link {
+      font-size: 0.875rem;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+    }
   }
 }

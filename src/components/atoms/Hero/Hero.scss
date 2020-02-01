@@ -38,6 +38,12 @@ $size-photo: 150px;
       margin-bottom: 0;
     }
   }
+  
+  &__talk {
+    display: block;
+    text-align: center;
+    margin-bottom: .5rem;
+  }
 
   &__photo {
     width: $size-photo;
