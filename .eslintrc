@@ -12,6 +12,8 @@
 
     "react/jsx-filename-extension": 0,
     "react/jsx-props-no-spreading": 0,
+    "react/jsx-fragments": 0,
+    "react/static-property-placement": [1, "static public field"],
 
     "import/no-unresolved": 0
   }
