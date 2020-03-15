@@ -1,48 +1,37 @@
-import gtmParts from 'react-google-tag-manager';
+/* eslint-disable react/forbid-prop-types */
+/* eslint-disable react/no-unused-prop-types */
+
 import PropTypes from 'prop-types';
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
+import TagManager from 'react-gtm-module';
 
 class GoogleTagManager extends Component {
   static propTypes = {
-    // eslint-disable-next-line react/forbid-prop-types
-    additionalEvents: PropTypes.object,
+    auth: PropTypes.string,
+    dataLayer: PropTypes.object,
     dataLayerName: PropTypes.string,
-    id: PropTypes.string,
+    events: PropTypes.object,
+    gtmId: PropTypes.string,
+    hostname: PropTypes.string,
     isClient: PropTypes.bool,
-    localhost: PropTypes.string,
-    previewVariables: PropTypes.bool,
-    scheme: PropTypes.string,
+    preview: PropTypes.string,
   };
 
   static defaultProps = {
-    additionalEvents: {},
+    auth: undefined,
+    dataLayer: undefined,
     dataLayerName: 'dataLayer',
-    id: process.env.ID_GOOGLE_TAG_MANAGER,
+    events: undefined,
+    gtmId: process.env.ID_GOOGLE_TAG_MANAGER,
+    hostname: 'localhost',
     isClient: typeof window !== 'undefined',
-    localhost: 'localhost',
-    previewVariables: false,
-    scheme: 'https:',
+    preview: undefined,
   };
 
   constructor(props) {
     super(props);
 
-    const { additionalEvents, dataLayerName, id, previewVariables, scheme } = this.props;
-
-    if (this.shouldTrack()) {
-      const { noScriptAsReact, scriptAsReact } = gtmParts({
-        additionalEvents,
-        dataLayerName,
-        id,
-        previewVariables,
-        scheme,
-      });
-
-      this.state = {
-        noScriptAsReact,
-        scriptAsReact,
-      };
-    }
+    this.initializeTagManager(props);
   }
 
   shouldComponentUpdate() {
@@ -50,24 +39,20 @@ class GoogleTagManager extends Component {
   }
 
   shouldTrack = () => {
-    const { id, isClient, localhost } = this.props;
+    const { gtmId, isClient, hostname } = this.props;
+    return gtmId && isClient && window.location.hostname !== hostname;
+  };
 
-    return id && isClient && window.location.hostname !== localhost;
+  initializeTagManager = props => {
+    const { auth, dataLayer, dataLayerName, events, gtmId, preview } = props;
+
+    if (this.shouldTrack()) {
+      TagManager.initialize({ auth, dataLayer, dataLayerName, events, gtmId, preview });
+    }
   };
 
   render() {
-    if (!this.shouldTrack()) {
-      return null;
-    }
-
-    const { noScriptAsReact, scriptAsReact } = this.state;
-
-    return (
-      <Fragment>
-        <div>{noScriptAsReact()}</div>
-        <div>{scriptAsReact()}</div>
-      </Fragment>
-    );
+    return null;
   }
 }
 
