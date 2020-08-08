@@ -4,6 +4,7 @@ import Particles from 'react-particles-js';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import Avatar from 'Components/atoms/Avatar/Avatar';
 import Container from 'Components/atoms/Container/Container';
 import SocialLinks from 'Components/atoms/SocialLinks/SocialLinks';
 import Pulse from 'Components/atoms/Pulse/Pulse';
@@ -58,7 +59,7 @@ const Hero = props => {
       <Particles className="hero__particles" params={particlesParams} />
 
       <Container className="hero__container">
-        <img className="hero__photo" src="https://avatars3.githubusercontent.com/u/5731909?s=460&v=4" alt="Me" />
+        <Avatar alt="Me" className="hero__photo" src="https://avatars3.githubusercontent.com/u/5731909?s=460&v=4" />
 
         <div className="hero__about">
           <div className="hero__about-information">

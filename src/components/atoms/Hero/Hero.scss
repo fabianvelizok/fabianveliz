@@ -1,7 +1,5 @@
 @import '../../../styles/variables.scss';
 
-$size-photo: 150px;
-
 .hero {
   position: relative;
   background-color: $pickled-bluewood;
@@ -43,12 +41,5 @@ $size-photo: 150px;
     display: block;
     text-align: center;
     margin-bottom: .5rem;
-  }
-
-  &__photo {
-    width: $size-photo;
-    height: $size-photo;
-    border-radius: $size-photo;
-    border: 5px solid $cyprus;
   }
 }
