@@ -9,6 +9,7 @@ import Email from 'Components/icons/Email';
 import Github from 'Components/icons/Github';
 import Linkedin from 'Components/icons/Linkedin';
 import MetaTags from 'Components/atoms/MetaTags/MetaTags';
+import Particles from 'Components/atoms/Particles/Particles';
 import RichText from 'Components/atoms/RichText/RichText';
 
 import cv from 'Api/cv';
@@ -31,53 +32,57 @@ const CV = props => {
 
       <div className={classes} {...pickHTMLProps(rest)}>
         <div className="cv__left-column">
-          <Avatar className="cv__avatar" alt={cv.name} src={cv.image} />
+          <Particles />
 
-          <h1 className="cv__name">{cv.name}</h1>
-          <h2 className="cv__title">{cv.title}</h2>
+          <div className="cv__left-column-content">
+            <Avatar className="cv__avatar" alt={cv.name} src={cv.image} />
 
-          <h3 className="cv__section-title">Contact</h3>
-          <ul className="cv__socialLinks">
-            {cv.socialLinks.map(socialLink => {
-              const SocialLinkComponent = Icons[socialLink.key];
+            <h1 className="cv__name">{cv.name}</h1>
+            <h2 className="cv__title">{cv.title}</h2>
 
-              return (
-                <li key={socialLink.key}>
-                  <a
-                    className="cv__socialLinks-link"
-                    href={socialLink.link}
-                    rel={socialLink.target === '_blank' ? 'noopener noreferrer' : undefined}
-                    target={socialLink.target}
-                  >
-                    <SocialLinkComponent className="cv__socialLinks-icon" />
-                    <span>{socialLink.name}</span>
-                  </a>
+            <h3 className="cv__section-title">Contact</h3>
+            <ul className="cv__socialLinks">
+              {cv.socialLinks.map(socialLink => {
+                const SocialLinkComponent = Icons[socialLink.key];
+
+                return (
+                  <li key={socialLink.key}>
+                    <a
+                      className="cv__socialLinks-link"
+                      href={socialLink.link}
+                      rel={socialLink.target === '_blank' ? 'noopener noreferrer' : undefined}
+                      target={socialLink.target}
+                    >
+                      <SocialLinkComponent className="cv__socialLinks-icon" />
+                      <span>{socialLink.name}</span>
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+
+            <h3 className="cv__section-title">Main Skills</h3>
+            <ul className="cv__skills">
+              {cv.skills.map(skill => (
+                <li className="cv__skills-item" key={skill}>
+                  {skill}
                 </li>
-              );
-            })}
-          </ul>
+              ))}
+            </ul>
 
-          <h3 className="cv__section-title">Skills</h3>
-          <ul className="cv__skills">
-            {cv.skills.map(skill => (
-              <li className="cv__skills-item" key={skill}>
-                {skill}
-              </li>
-            ))}
-          </ul>
-
-          <h3 className="cv__section-title">Languages</h3>
-          <ul className="cv__default-list">
-            {cv.languages.map(language => {
-              return (
-                <li className="cv__language-item" key={language.name}>
-                  <strong>{language.name}</strong>
-                  <span className="cv__separator">-</span>
-                  <span>{language.level}</span>
-                </li>
-              );
-            })}
-          </ul>
+            <h3 className="cv__section-title">Languages</h3>
+            <ul className="cv__default-list">
+              {cv.languages.map(language => {
+                return (
+                  <li className="cv__language-item" key={language.name}>
+                    <strong>{language.name}</strong>
+                    <span className="cv__separator">-</span>
+                    <span>{language.level}</span>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
         </div>
         <div className="cv__right-column">
           <h3 className="cv__section-title cv__section-title--inverted">Profile</h3>

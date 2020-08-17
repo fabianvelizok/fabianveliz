@@ -42,15 +42,15 @@ const data = {
   ],
   courses: [
     {
-      name: 'Advanced Javascript Concepts',
+      name: 'Advanced JS',
       link: 'https://www.udemy.com/certificate/UC-7fbbe4da-83a3-4ea8-9af3-50cab03b1a77/',
     },
     {
-      name: 'The Complete Junior to Senior Web Developer Roadmap (2020)',
+      name: 'Junior to Senior',
       link: 'https://www.udemy.com/certificate/UC-c896ee6c-5d02-4ab0-9f63-d3f9a4ad696b/',
     },
     {
-      name: 'Design systems for developers',
+      name: 'Design systems for devs',
       link: 'https://platzi.com/@fabianvelizok/curso/1422-diseno-desarrolladores/diploma/detalle/',
     },
     {
@@ -70,7 +70,7 @@ const data = {
       link: 'https://globant.acamica.com/cert/30e7dc293f2fce99bc49d307841eee11876cc1ad',
     },
     {
-      name: 'WPO - Website performance optimization',
+      name: 'WPO',
       link: 'https://platzi.com/@fabianvelizok/curso/1390-optimizacion-web/diploma/detalle/',
     },
     {
@@ -82,7 +82,7 @@ const data = {
       link: 'https://platzi.com/clases/html5-css3/',
     },
     {
-      name: 'Testing with Jest',
+      name: 'Jest',
       link: 'https://platzi.com/@fabianvelizok/curso/1357-js-jest/diploma/detalle/',
     },
     {
@@ -102,11 +102,11 @@ const data = {
       link: 'https://platzi.com/@fabianvelizok/curso/1316-jquery-js/diploma/detalle/',
     },
     {
-      name: 'Advanced course of Node.js',
+      name: 'Advanced Node.js',
       link: 'https://platzi.com/@fabianvelizok/curso/nodejs/diploma/',
     },
     {
-      name: 'Professional course of Redux',
+      name: 'Professional Redux',
       link: 'https://platzi.com/@fabianvelizok/curso/redux/diploma/',
     },
     {
@@ -122,7 +122,7 @@ const data = {
       link: 'https://app.pluralsight.com/profile/fabianvelizok',
     },
     {
-      name: 'MEAN Stack',
+      name: 'MEAN',
       link: 'https://platzi.com/@fabianvelizok/curso/mean/diploma/',
     },
     {
@@ -130,7 +130,7 @@ const data = {
       link: 'https://platzi.com/@fabianvelizok/curso/angular/diploma/',
     },
     {
-      name: 'Definitive Javascript course',
+      name: 'Definitive Javascript',
       link: 'https://platzi.com/@fabianvelizok/curso/javascript-pro-2016/diploma/',
     },
     {
@@ -138,11 +138,11 @@ const data = {
       link: 'https://platzi.com/@fabianvelizok/curso/webpack/diploma/',
     },
     {
-      name: 'Professional course of Vue.js',
+      name: 'Professional Vue.js',
       link: 'https://platzi.com/@fabianvelizok/curso/vuejs-profesional/diploma/',
     },
     {
-      name: 'Basic course of Vue.js',
+      name: 'Basic Vue.js',
       link: 'https://platzi.com/@fabianvelizok/curso/vuejs/diploma/',
     },
     {
@@ -182,7 +182,7 @@ const data = {
       link: 'https://www.acamica.com/cert/fa0ebe4a6e0f227faf126d36bb73fc295721ac37',
     },
     {
-      name: 'Bootstrap 4 Quick Start: Code Modern Responsive Websites',
+      name: 'Bootstrap 4',
       link: 'https://www.udemy.com/certificate/UC-M99YGNGC/',
     },
     {
@@ -194,7 +194,7 @@ const data = {
       link: 'https://www.acamica.com/cert/9ed0521c905c66b7b2a66d130a94ab4b8ec04e65',
     },
     {
-      name: 'ECMAScript 6 Foundations',
+      name: 'ES6 Foundations',
       link: 'https://www.acamica.com/cert/26784989584d0d3b65dceb409be24300691d5267',
     },
     {
@@ -238,7 +238,7 @@ const data = {
       link: 'https://www.acamica.com/cert/9b076a64c0e071213ced81bac65bea6cf8ff4157',
     },
     {
-      name: 'Introduction to web development',
+      name: 'Intro to web development',
       link: 'https://www.acamica.com/cert/5100e3332c53b9cc4a0b3bc8162474809495b607',
     },
     {
@@ -250,7 +250,7 @@ const data = {
       link: 'https://www.acamica.com/cert/76bda37b68e928550b551cefe8913a90752a3646',
     },
     {
-      name: 'Prototypes and classes in javascript',
+      name: 'Prototypes and classes in JS',
       link: 'https://www.acamica.com/cert/3f7cbebe4542b7efc5d7dd0fbf2d3a3fc597efd2',
     },
     {

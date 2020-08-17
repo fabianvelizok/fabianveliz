@@ -36,8 +36,8 @@ const Navbar = props => {
           </a>
         </li>
         <li className="navbar__list-item">
-          <a className="navbar__list-link" href="mailto:velizfabianhoracio@gmail.com">
-            <Pulse>Let's talk</Pulse>
+          <a className="navbar__list-link" href="/cv">
+            <Pulse>CV</Pulse>
           </a>
         </li>
       </ul>

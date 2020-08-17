@@ -11,6 +11,12 @@
   &__left-column {
     flex: 0 0 30%;
     background-color: $pickled-bluewood;
+    position: relative;
+  }
+  
+  &__left-column-content {
+    position: relative;
+    z-index: 1;
   }
 
   &__right-column {
