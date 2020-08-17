@@ -68,12 +68,39 @@
   }
 
   &__default-list {
-    padding: 0;
-    list-style-position: inside;
+    &, ul {
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      position: relative;
+      padding-left: 1rem;
+
+      &:after {
+        content: "*";
+        left: 0;
+        line-height: 1;
+        position: absolute;
+        top: .25rem;
+      }
+    }
+
+    ul li {
+      &::after {
+        content: "-"
+      }
+    }
   }
 
-  &__workExperience-container {
-    display: inline;
+  &__workExperience-item {
+    margin-bottom: 1rem;
+  }
+
+  &__workExperience-header,
+  &__education-item {
+    display: flex;
+    justify-content: space-between;
   }
 
   &__skills {
@@ -86,6 +113,10 @@
       background-color: #63b7af;
       color: $white;
     }
+  }
+
+  &__language-item {
+    padding: 0 0 .5rem;
   }
 
   &__courses {
@@ -108,6 +139,10 @@
       text-decoration: none;
 
     }
+  }
+  
+  &__separator {
+    margin: 0 .5rem;
   }
 }
 

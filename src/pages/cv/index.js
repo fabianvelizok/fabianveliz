@@ -9,6 +9,7 @@ import Email from 'Components/icons/Email';
 import Github from 'Components/icons/Github';
 import Linkedin from 'Components/icons/Linkedin';
 import MetaTags from 'Components/atoms/MetaTags/MetaTags';
+import RichText from 'Components/atoms/RichText/RichText';
 
 import cv from 'Api/cv';
 import './index.scss';
@@ -42,7 +43,12 @@ const CV = props => {
 
               return (
                 <li key={socialLink.key}>
-                  <a className="cv__socialLinks-link" href={socialLink.link} rel="noopener noreferrer" target="_blank">
+                  <a
+                    className="cv__socialLinks-link"
+                    href={socialLink.link}
+                    rel={socialLink.target === '_blank' ? 'noopener noreferrer' : undefined}
+                    target={socialLink.target}
+                  >
                     <SocialLinkComponent className="cv__socialLinks-icon" />
                     <span>{socialLink.name}</span>
                   </a>
@@ -64,8 +70,10 @@ const CV = props => {
           <ul className="cv__default-list">
             {cv.languages.map(language => {
               return (
-                <li key={language.name}>
-                  <strong>{language.name}</strong>-<span>{language.level}</span>
+                <li className="cv__language-item" key={language.name}>
+                  <strong>{language.name}</strong>
+                  <span className="cv__separator">-</span>
+                  <span>{language.level}</span>
                 </li>
               );
             })}
@@ -73,22 +81,22 @@ const CV = props => {
         </div>
         <div className="cv__right-column">
           <h3 className="cv__section-title cv__section-title--inverted">Profile</h3>
-          <p>{cv.profile}</p>
+          <RichText content={cv.profile} />
 
           <h3 className="cv__section-title cv__section-title--inverted">Work Experience</h3>
           <ul className="cv__default-list">
             {cv.workExperience.map(experience => {
               return (
-                <li key={`${experience.from}${experience.to}`}>
-                  <div className="cv__workExperience-container">
-                    <p>
-                      <span>
-                        {experience.from}-{experience.to}
-                      </span>
-                      <strong>{experience.title}</strong>
-                    </p>
-                    <p>{experience.description}</p>
+                <li className="cv__workExperience-item" key={`${experience.from}${experience.to}`}>
+                  <div className="cv__workExperience-header">
+                    <strong>{experience.title}</strong>
+                    <div>
+                      <span>{experience.from}</span>
+                      <span className="cv__separator">-</span>
+                      <span>{experience.to}</span>
+                    </div>
                   </div>
+                  <RichText content={experience.description} />
                 </li>
               );
             })}
@@ -99,10 +107,15 @@ const CV = props => {
             {cv.education.map(education => {
               return (
                 <li key={`${education.from}${education.to}`}>
-                  <span>
-                    {education.from}-{education.to}
-                  </span>
-                  <strong>{education.title}</strong>
+                  <div className="cv__education-item">
+                    <strong>{education.title}</strong>
+                    <span>
+                      {education.from}
+                      <span className="cv__separator">-</span>
+                      {education.to}
+                    </span>
+                  </div>
+                  <RichText content={education.description} />
                 </li>
               );
             })}

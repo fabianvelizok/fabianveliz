@@ -6,20 +6,40 @@ const data = {
     {
       key: 'email',
       name: 'Email',
-      link: 'velizfabianhoracio@gmail.com',
+      link: 'mailto:velizfabianhoracio@gmail.com',
+      target: '_self',
     },
     {
       key: 'linkedin',
       name: 'Linkedin',
       link: 'https://www.linkedin.com/in/velizfabianhoracio/',
+      target: '_blank',
     },
     {
       key: 'github',
       name: 'Github',
       link: 'https://github.com/fabianvelizok',
+      target: '_blank',
     },
   ],
-  skills: ['HTML5', 'CSS3', 'Javascript', 'React', 'Redux', 'Web development'],
+  skills: [
+    'HTML5',
+    'CSS3',
+    'Javascript',
+    'React',
+    'React ecosystem',
+    'Web development',
+    'Webpack',
+    'Responsive Design',
+    'Node.js',
+    'Git',
+    'SEO',
+    'Next.js',
+    'Flow',
+    'AngularJS/Angular',
+    'jQuery',
+    'Ruby on Rails',
+  ],
   courses: [
     {
       name: 'Advanced Javascript Concepts',
@@ -259,19 +279,49 @@ const data = {
     },
   ],
   profile:
-    'I am a professional with about 6 years of experience in web application development using different technologies and tools. I have the ability to adapt myself easily to the environment and learn fastly. I always try to get the best product possible, so every tiny detail is important to me. I love challenges and learning about new tools and technologies.',
+    '<p>I am currently working as a Web UI Developer at Globant. I am also currently studying Information Systems Engineering in UTN-FRT.</p><p>I really enjoy challenges and learning about new tools and technologies.</p>',
   workExperience: [
     {
       from: 'Nov 2018',
       to: 'Present',
-      title: 'Senior web ui at globant',
-      description: 'bla bla bla',
+      title: 'Senior Web UI Developer at Globant',
+      description: `
+        <p>I have been working on:</p>
+        <ul>
+          <li><p>Analysis, development, creation of features and functionalities and bug fixing.</p></li>
+          <li><p>Code scalability, maintenance, style and architecture improvements (Key developer and technical referent)</p></li>
+          <li><p>Mentoring: I have helped new Globers to understand Globant values, improve their careers and pass to the next step. I gave and received feedbacks to detect points to improve.</p></li>
+          <li><p>Start training to be a gatekeeper</p></li>
+        </ul>
+      `,
     },
     {
       from: 'Sep 2015',
       to: 'Nov 2018',
-      title: 'Semi Senior web ui at globant',
-      description: 'bla bla bla',
+      title: 'Semi Senior Web UI Developer at Globant',
+      description: `
+        <p>I was working on:</p>
+        <ul>
+          <li><p>Creation, development, analysis and implementation of new features and bug fixing.</p></li>
+          <li><p>Start as a mentor: Learn what mentoring is and have my first internal mentees.</p></li>
+        </ul>
+      `,
+    },
+    {
+      from: 'Jan 2015',
+      to: 'Dec 2017',
+      title: 'Front-End & Back-End Developer at NordecMedia',
+      description: `
+        <p>This was a freelance experience. I was mostly working on creation, development, analysis and implementation of new features and bug fixing.</p>
+      `,
+    },
+    {
+      from: 'Nov 2013',
+      to: 'May 2015',
+      title: 'Front-End & Back-End Developer at Insignia4u',
+      description: `
+        <p>I was mostly working on creation, development, analysis and implementation of new features and bug fixing.</p>
+      `,
     },
   ],
   education: [
@@ -279,6 +329,7 @@ const data = {
       from: '2019',
       to: 'Present',
       title: 'System engineer degree',
+      description: 'I am currently pursuing a degree in Information Systems Engineering.',
     },
   ],
   languages: [
