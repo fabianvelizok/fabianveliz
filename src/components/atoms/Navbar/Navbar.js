@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Pulse from 'Components/atoms/Pulse/Pulse';
+import AnimationPulse from 'Components/atoms/AnimationPulse/AnimationPulse';
 
 import './Navbar.scss';
 
@@ -36,8 +36,8 @@ const Navbar = props => {
           </a>
         </li>
         <li className="navbar__list-item">
-          <a className="navbar__list-link" href="mailto:velizfabianhoracio@gmail.com">
-            <Pulse>Let's talk</Pulse>
+          <a className="navbar__list-link" href="/cv">
+            <AnimationPulse>CV</AnimationPulse>
           </a>
         </li>
       </ul>

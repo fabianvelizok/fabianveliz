@@ -1,0 +1,19 @@
+@import '../../../styles/variables.scss';
+
+.animation-fade-in-down {
+  animation-name: animation-fade-in-down;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes animation-fade-in-down {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

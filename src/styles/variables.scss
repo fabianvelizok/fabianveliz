@@ -1,2 +1,6 @@
+@import 'variables/breakpoints';
 @import 'variables/colors';
 @import 'variables/fonts';
+
+// Utility for writing CSS media queries in an easy and maintainable way
+@import 'node_modules/include-media/dist/include-media.scss';

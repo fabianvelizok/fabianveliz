@@ -7,8 +7,9 @@ import Hero from 'Components/atoms/Hero/Hero';
 import Main from 'Components/templates/Main/Main';
 import MetaTags from 'Components/atoms/MetaTags/MetaTags';
 
+import home from 'Api/home';
+
 import './index.scss';
-// import '../_document.scss';
 
 const Home = props => {
   const { className, ...rest } = props;
@@ -19,7 +20,7 @@ const Home = props => {
     <Main className={classes} {...pickHTMLProps(rest)}>
       <MetaTags title="Home" />
 
-      <Hero className="home__hero" />
+      <Hero avatar={home.avatar} className="home__hero" links={home.socialLinks} profile={home.profile} />
 
       {/* TODO: Remove temporal div */}
       <div

@@ -1,0 +1,146 @@
+@import '../../styles/variables.scss';
+
+.cv {
+  display: flex;
+  overflow: hidden;
+
+  @include media('<medium') {
+    flex-direction: column;
+  }
+
+  &__container {
+    @include media('<medium') {
+      padding: 0;
+    }
+  }
+  
+  &__left-column,
+  &__right-column {
+    padding: 1rem;
+  }
+
+  &__left-column {
+    flex: 0 0 30%;
+    background-color: $pickled-bluewood;
+    position: relative;
+  }
+  
+  &__left-column-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__right-column {
+    background-color: #f1f1f1;
+    color: $cyprus;
+  }
+
+  &__avatar {
+    display: block;
+    margin: auto;
+  }
+
+  &__name,
+  &__title {
+    text-align: center;
+  }
+
+  &__name {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+  }
+  
+  &__title {
+    font-size: 1.25rem;
+  }
+
+  &__section-title {
+    border-bottom: 1px solid $white;
+    padding-bottom: 0.1875rem;
+    font-size: 1.25rem;
+
+    &--inverted {
+      border-color: $pickled-bluewood;
+      color: $pickled-bluewood;
+    }
+  }
+
+  &__default-list {
+    &, ul {
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      position: relative;
+      padding-left: 1rem;
+
+      &:after {
+        content: "*";
+        left: 0;
+        line-height: 1;
+        position: absolute;
+        top: .25rem;
+      }
+    }
+
+    ul li {
+      &::after {
+        content: "-"
+      }
+    }
+  }
+
+  &__workExperience-item {
+    margin-bottom: 1rem;
+  }
+
+  &__workExperience-header,
+  &__education-item {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__skills {
+    padding: 0;
+    
+    &-item {
+      display: inline-block;
+      padding: .5rem;
+      margin: .25rem;
+      background-color: $tradewind;
+      color: $white;
+    }
+  }
+
+  &__language-item {
+    padding: 0 0 .5rem;
+  }
+
+  &__courses {
+    padding: 0;
+    
+    &-item {
+      display: inline-block;
+      background-color: $tradewind;
+      margin: .25rem;
+
+      &:hover {
+        background-color: $oracle;
+      }
+    }
+    
+    &-link {
+      color: $white;
+      display: block;
+      padding: .5rem;
+      text-decoration: none;
+
+    }
+  }
+  
+  &__separator {
+    margin: 0 .5rem;
+  }
+}
+

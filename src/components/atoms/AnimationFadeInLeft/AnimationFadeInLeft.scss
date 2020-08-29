@@ -1,0 +1,19 @@
+@import '../../../styles/variables.scss';
+
+.animation-fade-in-left {
+  animation-name: animation-fade-in-left;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes animation-fade-in-left {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
