@@ -1,4 +1,5 @@
 @import '../../../styles/variables.scss';
+@import '../../../styles/tools/mixins.scss';
 
 .container {
   margin: auto;
@@ -6,5 +7,14 @@
   padding: {
     left: 1rem;
     right: 1rem;
+  }
+
+  &--full-in-mobile {
+    @include media(phone-only) {
+      padding: {
+        left: 0;
+        right: 0;
+      }
+    }
   }
 }

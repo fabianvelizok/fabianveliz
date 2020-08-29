@@ -22,7 +22,7 @@ const CV = props => {
   const classes = classNames(['cv', className]);
 
   return (
-    <Container className="cv__container">
+    <Container fullInMobile>
       <MetaTags title="CV" />
 
       <div className={classes} {...pickHTMLProps(rest)}>

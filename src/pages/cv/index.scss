@@ -8,13 +8,6 @@
   @include media(phone-only) {    
     flex-direction: column; 
   }
-
-  &__container {
-    @include media(phone-only) {    
-      padding-left: 0; 
-      padding-right: 0; 
-    }
-  }
   
   &__left-column,
   &__right-column {
