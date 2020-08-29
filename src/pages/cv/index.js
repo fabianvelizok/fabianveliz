@@ -5,21 +5,13 @@ import React from 'react';
 
 import Avatar from 'Components/atoms/Avatar/Avatar';
 import Container from 'Components/atoms/Container/Container';
-import Email from 'Components/icons/Email';
-import Github from 'Components/icons/Github';
-import Linkedin from 'Components/icons/Linkedin';
 import MetaTags from 'Components/atoms/MetaTags/MetaTags';
 import Particles from 'Components/atoms/Particles/Particles';
 import RichText from 'Components/atoms/RichText/RichText';
+import SocialLinks from 'Components/atoms/SocialLinks/SocialLinks';
 
 import cv from 'Api/cv';
 import './index.scss';
-
-const Icons = {
-  email: Email,
-  github: Github,
-  linkedin: Linkedin,
-};
 
 const CV = props => {
   const { className, ...rest } = props;
@@ -35,31 +27,14 @@ const CV = props => {
           <Particles />
 
           <div className="cv__left-column-content">
-            <Avatar className="cv__avatar" alt={cv.name} src={cv.image} />
+            <Avatar className="cv__avatar" alt={cv.name} src={cv.avatar} />
 
             <h1 className="cv__name">{cv.name}</h1>
             <h2 className="cv__title">{cv.title}</h2>
 
             <h3 className="cv__section-title">Contact</h3>
-            <ul className="cv__socialLinks">
-              {cv.socialLinks.map(socialLink => {
-                const SocialLinkComponent = Icons[socialLink.key];
-
-                return (
-                  <li key={socialLink.key}>
-                    <a
-                      className="cv__socialLinks-link"
-                      href={socialLink.link}
-                      rel={socialLink.target === '_blank' ? 'noopener noreferrer' : undefined}
-                      target={socialLink.target}
-                    >
-                      <SocialLinkComponent className="cv__socialLinks-icon" />
-                      <span>{socialLink.name}</span>
-                    </a>
-                  </li>
-                );
-              })}
-            </ul>
+            
+            <SocialLinks layout="column" links={cv.socialLinks} />
 
             <h3 className="cv__section-title">Main Skills</h3>
             <ul className="cv__skills">

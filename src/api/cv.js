@@ -1,23 +1,23 @@
 const data = {
-  image: 'https://avatars3.githubusercontent.com/u/5731909?s=460&v=4',
+  avatar: 'https://avatars3.githubusercontent.com/u/5731909?s=460&v=4',
   name: 'Fabián Horacio Veliz',
   title: 'FrontEnd Developer',
   socialLinks: [
     {
       key: 'email',
-      name: 'Email',
+      label: 'Email',
       link: 'mailto:velizfabianhoracio@gmail.com',
       target: '_self',
     },
     {
       key: 'linkedin',
-      name: 'Linkedin',
+      label: 'Linkedin',
       link: 'https://www.linkedin.com/in/velizfabianhoracio/',
       target: '_blank',
     },
     {
       key: 'github',
-      name: 'Github',
+      label: 'Github',
       link: 'https://github.com/fabianvelizok',
       target: '_blank',
     },
@@ -343,4 +343,5 @@ const data = {
     },
   ],
 };
+
 export default data;
