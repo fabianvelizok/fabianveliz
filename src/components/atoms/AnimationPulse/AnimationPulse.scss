@@ -1,12 +1,12 @@
 @import '../../../styles/variables.scss';
 
-.pulse {
-  animation: pulse 1.5s infinite;
+.animation-pulse {
+  animation: animation-pulse 1.5s infinite;
   display: inline-flex;
   transform: scale(1);
 }
 
-@keyframes pulse {
+@keyframes animation-pulse {
   0% {
     transform: scale(0.95);
   }

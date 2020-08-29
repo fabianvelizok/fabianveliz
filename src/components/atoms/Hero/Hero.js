@@ -3,10 +3,12 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import AnimationFadeInDown from 'Components/atoms/AnimationFadeInDown/AnimationFadeInDown';
+import AnimationFadeInLeft from 'Components/atoms/AnimationFadeInLeft/AnimationFadeInLeft';
+import AnimationPulse from 'Components/atoms/AnimationPulse/AnimationPulse';
 import Avatar from 'Components/atoms/Avatar/Avatar';
 import Container from 'Components/atoms/Container/Container';
 import Particles from 'Components/atoms/Particles/Particles';
-import Pulse from 'Components/atoms/Pulse/Pulse';
 import RichText from 'Components/atoms/RichText/RichText';
 import SocialLinks from 'Components/atoms/SocialLinks/SocialLinks';
 
@@ -26,13 +28,18 @@ const Hero = props => {
 
         <div className="hero__about">
           <div className="hero__about-information">
-            <strong>About me</strong>
+            
+            <AnimationFadeInDown>
+              <strong>About me</strong>
+            </AnimationFadeInDown>
 
-            <RichText content={profile} />
+            <AnimationFadeInLeft delay={0.5}>
+              <RichText content={profile} />
+            </AnimationFadeInLeft>
           </div>
         </div>
 
-        <Pulse className="hero__talk">Let's talk</Pulse>
+        <AnimationPulse className="hero__talk">Let's talk</AnimationPulse>
 
         <SocialLinks links={links} />
       </Container>

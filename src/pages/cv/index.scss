@@ -2,6 +2,7 @@
 
 .cv {
   display: flex;
+  overflow: hidden;
   
   &__left-column,
   &__right-column {

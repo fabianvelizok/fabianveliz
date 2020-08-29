@@ -3,12 +3,12 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import './Pulse.scss';
+import './AnimationPulse.scss';
 
-const Pulse = props => {
+const AnimationPulse = props => {
   const { className, children, ...rest } = props;
 
-  const classes = classNames(['pulse', className]);
+  const classes = classNames(['animation-pulse', className]);
 
   return (
     <div className={classes} {...pickHTMLProps(rest)}>
@@ -17,14 +17,14 @@ const Pulse = props => {
   );
 };
 
-Pulse.propTypes = {
+AnimationPulse.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
 };
 
-Pulse.defaultProps = {
+AnimationPulse.defaultProps = {
   children: undefined,
   className: undefined,
 };
 
-export default Pulse;
+export default AnimationPulse;
