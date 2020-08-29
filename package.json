@@ -17,6 +17,7 @@
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
     "classnames": "^2.2.6",
+    "include-media": "^1.4.9",
     "next": "^9.2.1",
     "node-sass": "^4.13.1",
     "pick-react-known-prop": "^0.1.5",

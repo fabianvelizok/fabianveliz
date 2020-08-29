@@ -22,7 +22,7 @@ const CV = props => {
   const classes = classNames(['cv', className]);
 
   return (
-    <Container>
+    <Container className="cv__container">
       <MetaTags title="CV" />
 
       <div className={classes} {...pickHTMLProps(rest)}>

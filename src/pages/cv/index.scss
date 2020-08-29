@@ -3,6 +3,16 @@
 .cv {
   display: flex;
   overflow: hidden;
+
+  @include media('<medium') {
+    flex-direction: column;
+  }
+
+  &__container {
+    @include media('<medium') {
+      padding: 0;
+    }
+  }
   
   &__left-column,
   &__right-column {
