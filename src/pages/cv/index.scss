@@ -1,16 +1,18 @@
 @import '../../styles/variables.scss';
+@import '../../styles/tools/mixins.scss';
 
 .cv {
   display: flex;
   overflow: hidden;
 
-  @include media('<medium') {
-    flex-direction: column;
+  @include media(phone-only) {    
+    flex-direction: column; 
   }
 
   &__container {
-    @include media('<medium') {
-      padding: 0;
+    @include media(phone-only) {    
+      padding-left: 0; 
+      padding-right: 0; 
     }
   }
   

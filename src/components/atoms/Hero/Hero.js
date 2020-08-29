@@ -29,11 +29,11 @@ const Hero = props => {
         <div className="hero__about">
           <div className="hero__about-information">
             
-            <AnimationFadeInDown>
+            <AnimationFadeInDown animateInViewport>
               <strong>About me</strong>
             </AnimationFadeInDown>
 
-            <AnimationFadeInLeft delay={0.5}>
+            <AnimationFadeInLeft animateInViewport>
               <RichText content={profile} />
             </AnimationFadeInLeft>
           </div>

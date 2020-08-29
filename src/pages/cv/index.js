@@ -32,22 +32,22 @@ const CV = props => {
           <div className="cv__left-column-content">
             <Avatar className="cv__avatar" alt={cv.name} src={cv.avatar} />
 
-            <AnimationFadeInDown>
+            <AnimationFadeInDown animateInViewport>
               <h1 className="cv__name">{cv.name}</h1>
             </AnimationFadeInDown>
 
-            <AnimationFadeInDown>
+            <AnimationFadeInDown animateInViewport>
               <h2 className="cv__title">{cv.title}</h2>
             </AnimationFadeInDown>
 
             <h3 className="cv__section-title">Contact</h3>
             
-            <AnimationFadeInLeft delay={0.5}>
+            <AnimationFadeInLeft animateInViewport>
               <SocialLinks layout="column" links={cv.socialLinks} />
             </AnimationFadeInLeft>
 
             <h3 className="cv__section-title">Main Skills</h3>
-            <AnimationFadeInLeft delay={1}>
+            <AnimationFadeInLeft animateInViewport>
               <ul className="cv__skills">
                 {cv.skills.map(skill => (
                   <li className="cv__skills-item" key={skill}>
@@ -58,7 +58,7 @@ const CV = props => {
             </AnimationFadeInLeft>
 
             <h3 className="cv__section-title">Languages</h3>
-            <AnimationFadeInLeft delay={1.5}>
+            <AnimationFadeInLeft animateInViewport>
               <ul className="cv__default-list">
                 {cv.languages.map(language => {
                   return (
@@ -75,12 +75,12 @@ const CV = props => {
         </div>
         <div className="cv__right-column">
           <h3 className="cv__section-title cv__section-title--inverted">Profile</h3>
-          <AnimationFadeInRight delay={0.5}>
+          <AnimationFadeInRight animateInViewport>
             <RichText content={cv.profile} />
           </AnimationFadeInRight>
 
           <h3 className="cv__section-title cv__section-title--inverted">Work Experience</h3>
-          <AnimationFadeInRight delay={1}>
+          <AnimationFadeInRight animateInViewport>
             <ul className="cv__default-list">
               {cv.workExperience.map(experience => {
                 return (
@@ -101,7 +101,7 @@ const CV = props => {
           </AnimationFadeInRight>
 
           <h3 className="cv__section-title cv__section-title--inverted">Education</h3>
-          <AnimationFadeInRight delay={1.5}>
+          <AnimationFadeInRight animateInViewport>
             <ul className="cv__default-list">
               {cv.education.map(education => {
                 return (
@@ -122,7 +122,7 @@ const CV = props => {
           </AnimationFadeInRight>
 
           <h3 className="cv__section-title cv__section-title--inverted">Courses</h3>
-          <AnimationFadeInRight delay={2}>
+          <AnimationFadeInRight animateInViewport>
             <ul className="cv__courses">
               {cv.courses.map(course => {
                 return (

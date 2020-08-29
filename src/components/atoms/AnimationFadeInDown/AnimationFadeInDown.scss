@@ -6,6 +6,10 @@
   animation-fill-mode: both;
 }
 
+.waiting-animation {
+  visibility: hidden;
+}
+
 @keyframes animation-fade-in-down {
   from {
     opacity: 0;
