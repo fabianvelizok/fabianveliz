@@ -14,7 +14,7 @@ class Header extends Component {
     super(props);
 
     this.state = {
-      shouldInvertHeaderStyles: false,
+      shouldCompact: false,
     };
   }
 
@@ -30,16 +30,16 @@ class Header extends Component {
     const scrollYLimit = 30;
 
     this.setState({
-      shouldInvertHeaderStyles: window.scrollY >= scrollYLimit,
+      shouldCompact: window.scrollY >= scrollYLimit,
     });
   };
 
   render() {
     const { className, ...rest } = this.props;
-    const { shouldInvertHeaderStyles } = this.state;
+    const { shouldCompact } = this.state;
 
     const classes = classNames('header', className, {
-      'header--black': shouldInvertHeaderStyles,
+      'header--compact': shouldCompact,
     });
 
     return (

@@ -2,44 +2,40 @@ import { pickHTMLProps } from 'pick-react-known-prop';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-
-import AnimationPulse from 'Components/atoms/AnimationPulse/AnimationPulse';
+import Link from 'next/link'
+import { withRouter } from 'next/router'
 
 import './Navbar.scss';
 
+const CV_PAGE_PATH = "/cv";
+
 const Navbar = props => {
-  const { className, ...rest } = props;
+  const { className, router, ...rest } = props;
+
+  const isCVPage = router && router.pathname === CV_PAGE_PATH;
 
   const classes = classNames(['navbar', className]);
 
   return (
     <nav className={classes} {...pickHTMLProps(rest)}>
       <ul className="navbar__list">
-        <li className="navbar__list-item navbar__list-item--hidden">
-          <a className="navbar__list-link" href="#hero">
-            Home
-          </a>
-        </li>
-        <li className="navbar__list-item navbar__list-item--hidden">
-          <a className="navbar__list-link" href="#careers">
-            Careers
-          </a>
-        </li>
-        <li className="navbar__list-item navbar__list-item--hidden">
-          <a className="navbar__list-link" href="#skills">
-            Skills
-          </a>
-        </li>
-        <li className="navbar__list-item navbar__list-item--hidden">
-          <a className="navbar__list-link" href="#courses">
-            Courses
-          </a>
-        </li>
-        <li className="navbar__list-item">
-          <a className="navbar__list-link" href="/cv">
-            <AnimationPulse>CV</AnimationPulse>
-          </a>
-        </li>
+        {!isCVPage && (          
+          <li className="navbar__list-item">
+            <Link href="/cv">
+              <a className="navbar__list-link">
+                CV
+              </a>
+            </Link>
+          </li>
+        )}
+
+        {isCVPage && ( 
+          <li className="navbar__list-item">
+            <a href="/cv?download=true" className="navbar__list-link" >
+              Download PDF
+            </a>
+          </li>
+        )}
       </ul>
     </nav>
   );
@@ -53,4 +49,4 @@ Navbar.defaultProps = {
   className: undefined,
 };
 
-export default Navbar;
+export default withRouter(Navbar);

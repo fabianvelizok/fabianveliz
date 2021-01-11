@@ -1,5 +1,5 @@
-@import '../../styles/variables.scss';
-@import '../../styles/tools/mixins.scss';
+@import '../../../styles/variables.scss';
+@import '../../../styles/tools/mixins.scss';
 
 .cv {
   display: flex;
@@ -12,10 +12,11 @@
   &__left-column,
   &__right-column {
     padding: 1rem;
+    padding-top: 5rem;
   }
 
   &__left-column {
-    flex: 0 0 30%;
+    width: 30%;
     background-color: $pickled-bluewood;
     position: relative;
   }
@@ -26,6 +27,7 @@
   }
 
   &__right-column {
+    width: 70%;
     background-color: #f1f1f1;
     color: $cyprus;
   }
@@ -137,5 +139,62 @@
   &__separator {
     margin: 0 .5rem;
   }
+
+  /* 
+   * The `html-pdf` lib has some issues with flexbox,
+   * so `float: left` and `position: absolute` are just workarounds. 
+   */
+  &--pdf {
+    position: relative;
+
+    .avatar {
+      height: 100px;
+      width: 100px;
+    }
+
+    .cv__left-column,
+    .cv__right-column {
+      padding-top: 2rem;
+    }
+    
+    .cv__left-column {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+    }
+    
+    .cv__right-column {
+      margin-left: 30%;
+    }
+
+    .social-links__link--column {
+      display: block;
+      overflow: hidden;
+    }
+
+    .social-links__icon--column,
+    .social-links__label--column {
+      float: left;
+    }
+  }
+
+  .cv__workExperience-header,
+  .cv__education-item {
+    overflow: hidden;
+  }
+
+  .cv__workExperience-left,
+  .cv__education-left {
+    float: left;
+  }
+
+  .cv__workExperience-right,
+  .cv__education-right {
+    float: right;
+  }
 }
 
+.cv__header {
+  background-color: $cyprus;
+}

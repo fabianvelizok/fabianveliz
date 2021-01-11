@@ -11,12 +11,16 @@
   "engines": {
     "node": ">=12.14.1"
   },
+  "browser": {
+    "html-pdf": false
+  },
   "repository": "git+https://github.com/fabianvelizok/fabianveliz.git",
   "author": "Fabián Veliz <velizfabianhoracio@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
     "classnames": "^2.2.6",
+    "html-pdf": "^2.2.0",
     "next": "^9.2.1",
     "node-sass": "^4.13.1",
     "pick-react-known-prop": "^0.1.5",
