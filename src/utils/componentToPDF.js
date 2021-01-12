@@ -10,6 +10,7 @@ const componentToPDF = (component) => {
       orientation: 'portrait',
       type: 'pdf',
       timeout: 30000,
+      phantomArgs: ['--local-url-access=false']
     };
 
     const buffer = pdf.create(html, options).toBuffer((err, buffer) => {

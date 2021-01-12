@@ -1,6 +1,6 @@
 {
   "name": "fabianveliz",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "My personal website",
   "scripts": {
     "dev": "next src",
@@ -21,12 +21,12 @@
     "@zeit/next-sass": "^1.0.1",
     "classnames": "^2.2.6",
     "html-pdf": "^2.2.0",
-    "next": "^9.2.1",
+    "next": "^10.0.5",
     "node-sass": "^4.13.1",
     "pick-react-known-prop": "^0.1.5",
     "prop-types": "^15.7.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "react-gtm-module": "^2.0.8",
     "react-particles-js": "^2.7.0",
     "react-visibility-sensor": "^5.1.1"

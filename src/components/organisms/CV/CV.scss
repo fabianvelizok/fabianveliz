@@ -35,7 +35,8 @@
     color: $cyprus;
     width: 70%;
 
-    @include media(phone-only) {    
+    @include media(phone-only) {
+      padding-top: 1rem;    
       width: 100%;
     }
   }

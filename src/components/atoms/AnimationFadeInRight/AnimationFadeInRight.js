@@ -26,7 +26,7 @@ const AnimationFadeInRight = props => {
 
   return (
     <div className={classes} style={style} {...pickHTMLProps(rest)}>
-      <Wrapper onChange={(visible) => onChange(visible)} partialVisibility>
+      <Wrapper onChange={(visible) => onChange(visible)} partialVisibility={animateInViewport ? true : undefined}>
         {children}
       </Wrapper>
     </div>
