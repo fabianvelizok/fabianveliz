@@ -19,6 +19,10 @@
     width: 30%;
     background-color: $pickled-bluewood;
     position: relative;
+
+    @include media(phone-only) {    
+      width: 100%;
+    }
   }
   
   &__left-column-content {
@@ -27,9 +31,13 @@
   }
 
   &__right-column {
-    width: 70%;
     background-color: #f1f1f1;
     color: $cyprus;
+    width: 70%;
+
+    @include media(phone-only) {    
+      width: 100%;
+    }
   }
 
   &__avatar {
