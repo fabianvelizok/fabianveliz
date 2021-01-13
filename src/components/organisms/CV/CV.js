@@ -2,6 +2,7 @@ import { pickHTMLProps } from 'pick-react-known-prop';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { useQuery, gql } from "@apollo/client";
 
 import AnimationFadeInDown from 'Components/atoms/AnimationFadeInDown/AnimationFadeInDown';
 import AnimationFadeInLeft from 'Components/atoms/AnimationFadeInLeft/AnimationFadeInLeft';
@@ -13,12 +14,71 @@ import Particles from 'Components/atoms/Particles/Particles';
 import RichText from 'Components/atoms/RichText/RichText';
 import SocialLinks from 'Components/atoms/SocialLinks/SocialLinks';
 import Header from 'Components/organisms/Header/Header';
-import cv from 'Api/cv';
 
 import './CV.scss';
 
+const ResumeQuery = gql`
+  query ResumeQuery {
+    bio {
+      name
+      tagline
+      full_profile
+      short_profile
+      avatar
+      socialLinks {
+        key
+        label
+        link
+        target
+      }
+    }
+    skills,
+    courses {
+      name
+      link
+    }
+    workExperience {
+      from
+      to
+      title
+      description
+    }
+    education {
+      from
+      to
+      title
+      description
+    }
+    languages {
+      name
+      level
+    }
+  }
+`;
+
 const CV = props => {
   const { className, shouldRenderPDF, ...rest } = props;
+
+  const { data, error, loading } = useQuery(ResumeQuery);
+
+  // TODO: Move to a component
+  if (error) {
+    return <div>Error... Oops!</div>
+  }
+
+  // TODO: Move to a component
+  if (loading) {
+    return <div>Loading...</div>
+  }
+
+  const { 
+    bio,
+    courses,
+    education,
+    languages,
+    skills,
+    workExperience
+  } = data;
 
   return (
     <Container className={className} fullInMobile>
@@ -36,26 +96,26 @@ const CV = props => {
           <Particles />
 
           <div className="cv__left-column-content">
-            <Avatar className="cv__avatar" alt={cv.name} src={cv.avatar} />
+            <Avatar className="cv__avatar" alt={bio.name} src={bio.avatar} />
 
             <AnimationFadeInDown animateInViewport={!shouldRenderPDF}>
-              <h1 className="cv__name">{cv.name}</h1>
+              <h1 className="cv__name">{bio.name}</h1>
             </AnimationFadeInDown>
 
             <AnimationFadeInDown animateInViewport={!shouldRenderPDF}>
-              <h2 className="cv__title">{cv.title}</h2>
+              <h2 className="cv__title">{bio.tagline}</h2>
             </AnimationFadeInDown>
 
             <h3 className="cv__section-title">Contact</h3>
 
             <AnimationFadeInLeft animateInViewport={!shouldRenderPDF}>
-              <SocialLinks layout="column" links={cv.socialLinks} />
+              <SocialLinks layout="column" links={bio.socialLinks} />
             </AnimationFadeInLeft>
 
             <h3 className="cv__section-title">Main Skills</h3>
             <AnimationFadeInLeft animateInViewport={!shouldRenderPDF}>
               <ul className="cv__skills">
-                {cv.skills.map(skill => (
+                {skills.map(skill => (
                   <li className="cv__skills-item" key={skill}>
                     {skill}
                   </li>
@@ -66,7 +126,7 @@ const CV = props => {
             <h3 className="cv__section-title">Languages</h3>
             <AnimationFadeInLeft animateInViewport={!shouldRenderPDF}>
               <ul className="cv__default-list">
-                {cv.languages.map(language => {
+                {languages.map(language => {
                   return (
                     <li className="cv__language-item" key={language.name}>
                       <strong>{language.name}</strong>
@@ -82,13 +142,13 @@ const CV = props => {
         <div className="cv__right-column">
           <h3 className="cv__section-title cv__section-title--inverted">Profile</h3>
           <AnimationFadeInRight animateInViewport={!shouldRenderPDF}>
-            <RichText content={cv.profile} />
+            <RichText content={bio.short_profile} />
           </AnimationFadeInRight>
 
           <h3 className="cv__section-title cv__section-title--inverted">Work Experience</h3>
           <AnimationFadeInRight animateInViewport={!shouldRenderPDF}>
             <ul className="cv__default-list">
-              {cv.workExperience.map(experience => {
+              {workExperience.map(experience => {
                 return (
                   <li className="cv__workExperience-item" key={`${experience.from}${experience.to}`}>
                     <div className="cv__workExperience-header">
@@ -109,7 +169,7 @@ const CV = props => {
           <h3 className="cv__section-title cv__section-title--inverted">Education</h3>
           <AnimationFadeInRight animateInViewport={!shouldRenderPDF}>
             <ul className="cv__default-list">
-              {cv.education.map(education => {
+              {education.map(education => {
                 return (
                   <li key={`${education.from}${education.to}`}>
                     <div className="cv__education-item">
@@ -130,7 +190,7 @@ const CV = props => {
           <h3 className="cv__section-title cv__section-title--inverted">Courses</h3>
           <AnimationFadeInRight animateInViewport={!shouldRenderPDF}>
             <ul className="cv__courses">
-              {cv.courses.map(course => {
+              {courses.map(course => {
                 return (
                   <li className="cv__courses-item" key={course.name}>
                     {course.link ? (

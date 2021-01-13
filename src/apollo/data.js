@@ -1,27 +1,36 @@
 const data = {
-  avatar: 'https://avatars3.githubusercontent.com/u/5731909?s=460&v=4',
-  name: 'Fabián Horacio Veliz',
-  title: 'FrontEnd Developer',
-  socialLinks: [
-    {
-      key: 'email',
-      label: 'Email',
-      link: 'mailto:velizfabianhoracio@gmail.com',
-      target: '_self',
-    },
-    {
-      key: 'linkedin',
-      label: 'Linkedin',
-      link: 'https://www.linkedin.com/in/velizfabianhoracio/',
-      target: '_blank',
-    },
-    {
-      key: 'github',
-      label: 'Github',
-      link: 'https://github.com/fabianvelizok',
-      target: '_blank',
-    },
-  ],
+  bio: {
+    name: 'Fabián Horacio Veliz',
+    tagline: 'FrontEnd Developer',
+    full_profile: `
+      <p>I am currently working as a Web UI Developer at Globant. I am also currently studying Information Systems Engineering in UTN-FRT.</p>
+      <p>I really enjoy challenges and learning about new tools and technologies.</p>
+      <p>Do you want to know a little bit more? Check out my <a href="/cv">CV</a>.</p>
+    `,
+    short_profile:
+      '<p>I am currently working as a Web UI Developer at Globant. I am also currently studying Information Systems Engineering in UTN-FRT.</p><p>I really enjoy challenges and learning about new tools and technologies.</p>',
+    avatar: 'https://avatars3.githubusercontent.com/u/5731909?s=460&v=4',
+    socialLinks: [
+      {
+        key: 'email',
+        label: 'Email',
+        link: 'mailto:velizfabianhoracio@gmail.com',
+        target: '_self',
+      },
+      {
+        key: 'linkedin',
+        label: 'Linkedin',
+        link: 'https://www.linkedin.com/in/velizfabianhoracio/',
+        target: '_blank',
+      },
+      {
+        key: 'github',
+        label: 'Github',
+        link: 'https://github.com/fabianvelizok',
+        target: '_blank',
+      },
+    ],
+  },
   skills: [
     'HTML5',
     'CSS3',
@@ -278,8 +287,6 @@ const data = {
       link: 'https://www.acamica.com/cert/5c60d00551253c74823d3bbedc72c576b9e71ef9',
     },
   ],
-  profile:
-    '<p>I am currently working as a Web UI Developer at Globant. I am also currently studying Information Systems Engineering in UTN-FRT.</p><p>I really enjoy challenges and learning about new tools and technologies.</p>',
   workExperience: [
     {
       from: 'Nov 2018',
