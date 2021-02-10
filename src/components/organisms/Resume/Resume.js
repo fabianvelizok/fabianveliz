@@ -8,15 +8,15 @@ import AnimationFadeInLeft from 'Components/atoms/AnimationFadeInLeft/AnimationF
 import AnimationFadeInRight from 'Components/atoms/AnimationFadeInRight/AnimationFadeInRight';
 import Avatar from 'Components/atoms/Avatar/Avatar';
 import Container from 'Components/atoms/Container/Container';
+import Header from 'Components/organisms/Header/Header';
 import MetaTags from 'Components/atoms/MetaTags/MetaTags';
 import Particles from 'Components/atoms/Particles/Particles';
 import RichText from 'Components/atoms/RichText/RichText';
 import SocialLinks from 'Components/atoms/SocialLinks/SocialLinks';
-import Header from 'Components/organisms/Header/Header';
 
-import './CV.scss';
+import './Resume.scss';
 
-const CV = props => {
+const Resume = props => {
   const { className, data, shouldRenderPDF, ...rest } = props;
 
   const { 
@@ -30,55 +30,55 @@ const CV = props => {
 
   return (
     <Container className={className} fullInMobile>
-      <MetaTags title="CV" />
+      <MetaTags title="Resume" />
 
-      {!shouldRenderPDF && <Header className="cv__header" />}
+      {!shouldRenderPDF && <Header className="resume__header" />}
 
       <div
-        className={classNames("cv", {
-          "cv--pdf": shouldRenderPDF
+        className={classNames("resume", {
+          "resume--pdf": shouldRenderPDF
         })}
         {...pickHTMLProps(rest)}
       >
-        <div className="cv__left-column">
+        <div className="resume__left-column">
           <Particles />
 
-          <div className="cv__left-column-content">
-            <Avatar className="cv__avatar" alt={bio.name} src={bio.avatar} />
+          <div className="resume__left-column-content">
+            <Avatar className="resume__avatar" alt={bio.name} src={bio.avatar} />
 
             <AnimationFadeInDown animateInViewport={!shouldRenderPDF}>
-              <h1 className="cv__name">{bio.name}</h1>
+              <h1 className="resume__name">{bio.name}</h1>
             </AnimationFadeInDown>
 
             <AnimationFadeInDown animateInViewport={!shouldRenderPDF}>
-              <h2 className="cv__title">{bio.tagline}</h2>
+              <h2 className="resume__title">{bio.tagline}</h2>
             </AnimationFadeInDown>
 
-            <h3 className="cv__section-title">Contact</h3>
+            <h3 className="resume__section-title">Contact</h3>
 
             <AnimationFadeInLeft animateInViewport={!shouldRenderPDF}>
               <SocialLinks layout="column" links={bio.socialLinks} />
             </AnimationFadeInLeft>
 
-            <h3 className="cv__section-title">Main Skills</h3>
+            <h3 className="resume__section-title">Main Skills</h3>
             <AnimationFadeInLeft animateInViewport={!shouldRenderPDF}>
-              <ul className="cv__skills">
+              <ul className="resume__skills">
                 {skills.map(skill => (
-                  <li className="cv__skills-item" key={skill}>
+                  <li className="resume__skills-item" key={skill}>
                     {skill}
                   </li>
                 ))}
               </ul>
             </AnimationFadeInLeft>
 
-            <h3 className="cv__section-title">Languages</h3>
+            <h3 className="resume__section-title">Languages</h3>
             <AnimationFadeInLeft animateInViewport={!shouldRenderPDF}>
-              <ul className="cv__default-list">
+              <ul className="resume__default-list">
                 {languages.map(language => {
                   return (
-                    <li className="cv__language-item" key={language.name}>
+                    <li className="resume__language-item" key={language.name}>
                       <strong>{language.name}</strong>
-                      <span className="cv__separator">-</span>
+                      <span className="resume__separator">-</span>
                       <span>{language.level}</span>
                     </li>
                   );
@@ -87,23 +87,23 @@ const CV = props => {
             </AnimationFadeInLeft>
           </div>
         </div>
-        <div className="cv__right-column">
-          <h3 className="cv__section-title cv__section-title--inverted">Profile</h3>
+        <div className="resume__right-column">
+          <h3 className="resume__section-title resume__section-title--inverted">Profile</h3>
           <AnimationFadeInRight animateInViewport={!shouldRenderPDF}>
             <RichText content={bio.short_profile} />
           </AnimationFadeInRight>
 
-          <h3 className="cv__section-title cv__section-title--inverted">Work Experience</h3>
+          <h3 className="resume__section-title resume__section-title--inverted">Work Experience</h3>
           <AnimationFadeInRight animateInViewport={!shouldRenderPDF}>
-            <ul className="cv__default-list">
+            <ul className="resume__default-list">
               {workExperience.map(experience => {
                 return (
-                  <li className="cv__workExperience-item" key={`${experience.from}${experience.to}`}>
-                    <div className="cv__workExperience-header">
-                      <strong className="cv__workExperience-left">{experience.title}</strong>
-                      <div className="cv__workExperience-right">
+                  <li className="resume__workExperience-item" key={`${experience.from}${experience.to}`}>
+                    <div className="resume__workExperience-header">
+                      <strong className="resume__workExperience-left">{experience.title}</strong>
+                      <div className="resume__workExperience-right">
                         <span>{experience.from}</span>
-                        <span className="cv__separator">-</span>
+                        <span className="resume__separator">-</span>
                         <span>{experience.to}</span>
                       </div>
                     </div>
@@ -114,17 +114,17 @@ const CV = props => {
             </ul>
           </AnimationFadeInRight>
 
-          <h3 className="cv__section-title cv__section-title--inverted">Education</h3>
+          <h3 className="resume__section-title resume__section-title--inverted">Education</h3>
           <AnimationFadeInRight animateInViewport={!shouldRenderPDF}>
-            <ul className="cv__default-list">
+            <ul className="resume__default-list">
               {education.map(education => {
                 return (
                   <li key={`${education.from}${education.to}`}>
-                    <div className="cv__education-item">
-                      <strong className="cv__education-left">{education.title}</strong>
-                      <span className="cv__education-right">
+                    <div className="resume__education-item">
+                      <strong className="resume__education-left">{education.title}</strong>
+                      <span className="resume__education-right">
                         {education.from}
-                        <span className="cv__separator">-</span>
+                        <span className="resume__separator">-</span>
                         {education.to}
                       </span>
                     </div>
@@ -135,18 +135,18 @@ const CV = props => {
             </ul>
           </AnimationFadeInRight>
 
-          <h3 className="cv__section-title cv__section-title--inverted">Courses</h3>
+          <h3 className="resume__section-title resume__section-title--inverted">Courses</h3>
           <AnimationFadeInRight animateInViewport={!shouldRenderPDF}>
-            <ul className="cv__courses">
+            <ul className="resume__courses">
               {courses.map(course => {
                 return (
-                  <li className="cv__courses-item" key={course.name}>
+                  <li className="resume__courses-item" key={course.name}>
                     {course.link ? (
-                      <a className="cv__courses-link" href={course.link} rel="noopener noreferrer" target="_blank">
+                      <a className="resume__courses-link" href={course.link} rel="noopener noreferrer" target="_blank">
                         {course.name}
                       </a>
                     ) : (
-                        <span className="cv__courses-link">{course.name}</span>
+                        <span className="resume__courses-link">{course.name}</span>
                       )}
                   </li>
                 );
@@ -159,14 +159,14 @@ const CV = props => {
   );
 };
 
-CV.propTypes = {
+Resume.propTypes = {
   className: PropTypes.string,
   shouldRenderPDF: PropTypes.bool
 };
 
-CV.defaultProps = {
+Resume.defaultProps = {
   className: undefined,
   shouldRenderPDF: false
 };
 
-export default CV;
+export default Resume;

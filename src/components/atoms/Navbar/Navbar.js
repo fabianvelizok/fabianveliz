@@ -7,31 +7,31 @@ import { withRouter } from 'next/router'
 
 import './Navbar.scss';
 
-const CV_PAGE_PATH = "/cv";
+const RESUME_PAGE_PATH = "/resume";
 
 const Navbar = props => {
   const { className, router, ...rest } = props;
 
-  const isCVPage = router && router.pathname === CV_PAGE_PATH;
+  const isResumePage = router && router.pathname === RESUME_PAGE_PATH;
 
   const classes = classNames(['navbar', className]);
 
   return (
     <nav className={classes} {...pickHTMLProps(rest)}>
       <ul className="navbar__list">
-        {!isCVPage && (          
+        {!isResumePage && (          
           <li className="navbar__list-item">
-            <Link href="/cv">
+            <Link href="/resume">
               <a className="navbar__list-link">
-                CV
+                Resume
               </a>
             </Link>
           </li>
         )}
 
-        {isCVPage && ( 
+        {isResumePage && ( 
           <li className="navbar__list-item">
-            <a href="/cv?download=true" className="navbar__list-link" >
+            <a href="/resume?download=true" className="navbar__list-link" >
               Download PDF
             </a>
           </li>

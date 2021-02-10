@@ -8,7 +8,7 @@ const PDF = ({ children }) => (
   <html style={{fontSize: '10px'}}>
     <head>
       <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-      <link rel="stylesheet" href={`${host}/static/cv.css`} />
+      <link rel="stylesheet" href={`${host}/static/resume.css`} />
     </head>
     <body>
       {children}

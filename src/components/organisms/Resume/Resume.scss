@@ -1,7 +1,7 @@
 @import '../../../styles/variables.scss';
 @import '../../../styles/tools/mixins.scss';
 
-.cv {
+.resume {
   display: flex;
   overflow: hidden;
 
@@ -161,19 +161,19 @@
       width: 100px;
     }
 
-    .cv__left-column,
-    .cv__right-column {
+    .resume__left-column,
+    .resume__right-column {
       padding-top: 2rem;
     }
     
-    .cv__left-column {
+    .resume__left-column {
       position: absolute;
       left: 0;
       top: 0;
       bottom: 0;
     }
     
-    .cv__right-column {
+    .resume__right-column {
       margin-left: 30%;
     }
 
@@ -188,22 +188,22 @@
     }
   }
 
-  .cv__workExperience-header,
-  .cv__education-item {
+  .resume__workExperience-header,
+  .resume__education-item {
     overflow: hidden;
   }
 
-  .cv__workExperience-left,
-  .cv__education-left {
+  .resume__workExperience-left,
+  .resume__education-left {
     float: left;
   }
 
-  .cv__workExperience-right,
-  .cv__education-right {
+  .resume__workExperience-right,
+  .resume__education-right {
     float: right;
   }
 }
 
-.cv__header {
+.resume__header {
   background-color: $cyprus;
 }

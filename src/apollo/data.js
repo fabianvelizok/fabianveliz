@@ -5,7 +5,7 @@ const data = {
     full_profile: `
       <p>I am currently working as a Web UI Developer at Globant. I am also currently studying Information Systems Engineering in UTN-FRT.</p>
       <p>I really enjoy challenges and learning about new tools and technologies.</p>
-      <p>Do you want to know a little bit more? Check out my <a href="/cv">CV</a>.</p>
+      <p>Do you want to know a little bit more? Check out my <a href="/resume">Resume</a>.</p>
     `,
     short_profile:
       '<p>I am currently working as a Web UI Developer at Globant. I am also currently studying Information Systems Engineering in UTN-FRT.</p><p>I really enjoy challenges and learning about new tools and technologies.</p>',

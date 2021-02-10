@@ -5,8 +5,8 @@ import React from 'react';
 import { initializeApollo } from "Apollo/apolloClient";
 import { useApollo } from "Apollo/apolloClient";
 import componentToPDF from "Utils/componentToPDF";
-import CV from 'Components/organisms/CV/CV';
 import PDF from 'Components/templates/PDF/PDF';
+import Resume from 'Components/organisms/Resume/Resume';
 
 const ResumeQuery = gql`
   query ResumeQuery {
@@ -47,7 +47,7 @@ const ResumeQuery = gql`
   }
 `;
 
-const CVPage = (props) => {
+const ResumePage = (props) => {
   const { data, error, loading } = props;
 
   // TODO: Move to a component
@@ -60,10 +60,10 @@ const CVPage = (props) => {
     return <div>Loading...</div>
   }
 
-  return <CV data={data} />;
+  return <Resume data={data} />;
 };
 
-CVPage.getInitialProps = async ({ req, res, query }) => {
+ResumePage.getInitialProps = async ({ req, res, query }) => {
   const exportPDF = query.download === 'true';
   const isServer = !!req;
 
@@ -76,7 +76,7 @@ CVPage.getInitialProps = async ({ req, res, query }) => {
 
   if (isServer && exportPDF) {
     const buffer = await componentToPDF(
-      <PDF><CV data={data} shouldRenderPDF /></PDF>
+      <PDF><Resume data={data} shouldRenderPDF /></PDF>
     );
 
     res.setHeader('Content-disposition', 'attachment; filename="Veliz Fabian\'s Resume.pdf');
@@ -87,4 +87,4 @@ CVPage.getInitialProps = async ({ req, res, query }) => {
   return { data, error, loading };
 }
 
-export default CVPage;
+export default ResumePage;
