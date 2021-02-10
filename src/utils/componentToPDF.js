@@ -9,7 +9,6 @@ const componentToPDF = (component) => {
       format: 'A4',
       orientation: 'portrait',
       type: 'pdf',
-      timeout: 30000,
       phantomArgs: ['--local-url-access=false']
     };
 

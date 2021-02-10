@@ -2,7 +2,6 @@ import { pickHTMLProps } from 'pick-react-known-prop';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { useQuery, gql } from "@apollo/client";
 
 import AnimationFadeInDown from 'Components/atoms/AnimationFadeInDown/AnimationFadeInDown';
 import AnimationFadeInLeft from 'Components/atoms/AnimationFadeInLeft/AnimationFadeInLeft';
@@ -17,59 +16,8 @@ import Header from 'Components/organisms/Header/Header';
 
 import './CV.scss';
 
-const ResumeQuery = gql`
-  query ResumeQuery {
-    bio {
-      name
-      tagline
-      full_profile
-      short_profile
-      avatar
-      socialLinks {
-        key
-        label
-        link
-        target
-      }
-    }
-    skills,
-    courses {
-      name
-      link
-    }
-    workExperience {
-      from
-      to
-      title
-      description
-    }
-    education {
-      from
-      to
-      title
-      description
-    }
-    languages {
-      name
-      level
-    }
-  }
-`;
-
 const CV = props => {
-  const { className, shouldRenderPDF, ...rest } = props;
-
-  const { data, error, loading } = useQuery(ResumeQuery);
-
-  // TODO: Move to a component
-  if (error) {
-    return <div>Error... Oops!</div>
-  }
-
-  // TODO: Move to a component
-  if (loading) {
-    return <div>Loading...</div>
-  }
+  const { className, data, shouldRenderPDF, ...rest } = props;
 
   const { 
     bio,

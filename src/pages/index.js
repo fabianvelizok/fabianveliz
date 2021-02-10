@@ -1,8 +1,8 @@
 import { pickHTMLProps } from 'pick-react-known-prop';
+import { useQuery, gql } from "@apollo/client";
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { useQuery, gql } from "@apollo/client";
 
 import Hero from 'Components/atoms/Hero/Hero';
 import Main from 'Components/templates/Main/Main';
