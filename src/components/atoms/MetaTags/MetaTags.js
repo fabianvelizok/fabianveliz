@@ -8,6 +8,9 @@ const MetaTags = props => {
   // TODO: Add SEO tags.
   return (
     <Head>
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet" />
+
       <title>{title} | Fabián Veliz</title>
 
       <meta name="description" content="Fabián Horacio Veliz' personal website" />
