@@ -6,6 +6,7 @@ export const Education = objectType({
     t.string("from"),
     t.string("to"),
     t.string("title"),  
-    t.string("description")
+    t.string("description"),
+    t.string("logo")
   }
 });

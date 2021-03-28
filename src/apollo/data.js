@@ -1,21 +1,23 @@
+import { HOST } from "Utils/constants";
+
 const data = {
   bio: {
     name: 'Fabián Horacio Veliz',
     tagline: 'FrontEnd Developer',
     full_profile: `
-      <p>I am currently working as a Web UI Developer at Globant. I am also currently studying Information Systems Engineering in UTN-FRT.</p>
-      <p>I really enjoy challenges and learning about new tools and technologies.</p>
-      <p>Do you want to know a little bit more? Check out my <a href="/resume">Resume</a>.</p>
+      <p>Professional Web UI Developer with 8+ years of experience coding web applications, focusing on the front end side using technologies like: HTML5, CSS3, Javascript, React and Responsive Design, among others.</p>
+      <p>I am ready to face new challenges in my career.</p>
+      <p>Interested? Check out my <a href="/resume">Resume</a>.</p>
     `,
     short_profile:
-      '<p>I am currently working as a Web UI Developer at Globant. I am also currently studying Information Systems Engineering in UTN-FRT.</p><p>I really enjoy challenges and learning about new tools and technologies.</p>',
-    avatar: 'https://avatars3.githubusercontent.com/u/5731909?s=460&v=4',
+      '<p>Professional Web UI Developer with 8+ years of experience coding web applications, focusing on the front end side using technologies like: HTML5, CSS3, Javascript, React and Responsive Design, among others.</p><p>I really enjoy challenges and learning about new tools and technologies.</p>',
+    avatar: `${HOST}/static/me.jpeg`,
     socialLinks: [
       {
-        key: 'email',
-        label: 'Email',
-        link: 'mailto:velizfabianhoracio@gmail.com',
-        target: '_self',
+        key: 'website',
+        label: 'Website',
+        link: 'https://fabieldev.com',
+        target: '_blank',
       },
       {
         key: 'linkedin',
@@ -28,6 +30,12 @@ const data = {
         label: 'Github',
         link: 'https://github.com/fabianvelizok',
         target: '_blank',
+      },
+      {
+        key: 'email',
+        label: 'Email',
+        link: 'mailto:velizfabianhoracio@gmail.com',
+        target: '_self',
       },
     ],
   },
@@ -289,8 +297,32 @@ const data = {
   ],
   workExperience: [
     {
-      from: 'Nov 2018',
+      from: 'Dec 2020',
       to: 'Present',
+      title: 'Freelance Frontend Developer',
+      description: `
+        <p>Translate mockups to an interactive website. development, creation of features and functionalities and bug fixing.</p>
+      `,
+      logo: `${HOST}/static/fv-logo.png`,
+      projects: [
+        { name: "HBO.com", link: "http://asdasd.com" }
+      ],
+      technologies: ['HTML5', 'CSS3', 'Javascript']
+    },
+    {
+      from: 'Nov 2019',
+      to: 'Dec 2020',
+      title: 'Frontend Engineer Lead at HBO (Globant Contractor)',
+      description: `
+        <p>Maintenance, analysis, development, creation of features and functionalities and bug fixing. Front End Team leader, mentor and technical referent. </p>
+      `,
+      logo: `${HOST}/static/hbo-logo.jpeg`,
+      projects: [],
+      technologies: ['HTML5', 'CSS3', 'Javascript']
+    },
+    {
+      from: 'Nov 2018',
+      to: 'Dec 2020',
       title: 'Senior Web UI Developer at Globant',
       description: `
         <p>I have been working on:</p>
@@ -301,6 +333,9 @@ const data = {
           <li><p>Start training to be a gatekeeper</p></li>
         </ul>
       `,
+      logo: `${HOST}/static/globant-logo.png`,
+      projects: [],
+      technologies: ['HTML5', 'CSS3', 'Javascript']
     },
     {
       from: 'Sep 2015',
@@ -313,30 +348,61 @@ const data = {
           <li><p>Start as a mentor: Learn what mentoring is and have my first internal mentees.</p></li>
         </ul>
       `,
+      logo: `${HOST}/static/globant-logo.png`,
+      projects: [],
+      technologies: ['HTML5', 'CSS3', 'Javascript']
     },
     {
       from: 'Jan 2015',
       to: 'Dec 2017',
-      title: 'Front-End & Back-End Developer at NordecMedia',
+      title: 'Freelance Front-End & Back-End Developer',
       description: `
-        <p>This was a freelance experience. I was mostly working on creation, development, analysis and implementation of new features and bug fixing.</p>
+        <p>Freelance experience. I was mostly working on creation, development, analysis and implementation of new features and bug fixing.</p>
       `,
+      logo: `${HOST}/static/fv-logo.png`,
+      projects: [],
+      technologies: ['HTML5', 'CSS3', 'Javascript']
     },
     {
       from: 'Nov 2013',
       to: 'May 2015',
-      title: 'Front-End & Back-End Developer at Insignia4u',
+      title: 'Freelance Front-End & Back-End Developer at Insignia4u',
       description: `
         <p>I was mostly working on creation, development, analysis and implementation of new features and bug fixing.</p>
       `,
+      logo: `${HOST}/static/i4u-logo.png`,
+      projects: [],
+      technologies: ['HTML5', 'CSS3', 'Javascript']
     },
   ],
   education: [
     {
       from: '2019',
-      to: 'Present',
-      title: 'System engineer degree',
+      to: '2024',
+      title: 'Universidad Tecnológica Nacional (UTN-FRT)',
       description: 'I am currently pursuing a degree in Information Systems Engineering.',
+      logo: `${HOST}/static/utn-logo.jpeg`,
+    },
+    {
+      from: '',
+      to: '',
+      title: 'Platzi',
+      description: 'I completed successfully 3 careers: Frontend with React.js, Frontend Architecture and Backend development with Javascript. Check out my <a href="https://platzi.com/@fabianvelizok" target="_blank">Profile</a>.',
+      logo: `${HOST}/static/platzi-logo.jpeg`,
+    },
+    {
+      from: '',
+      to: '',
+      title: 'Acámica',
+      description: 'I completed successfully 3 careers: Frontend development, Backend development and Web development, which was a combination of the 2 previous mentioned careers. Check out my <a href="https://globant.acamica.com/@fabianV" target="_blank">Profile</a>.',
+      logo: `${HOST}/static/acamica-logo.png`,
+    },
+    {
+      from: '',
+      to: '',
+      title: 'Udemy',
+      description: 'I completed several advanced courses related to Frontend Development. Check out my <a href="https://www.udemy.com/user/fabian-veliz-4" target="_blank">Profile</a>.',
+      logo: `${HOST}/static/udemy-logo.jpeg`,
     },
   ],
   languages: [

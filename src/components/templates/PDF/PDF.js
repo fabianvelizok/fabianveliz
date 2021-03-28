@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// TODO: Move to env vars
-const isDevelopment = process.env.NODE_ENV === "development";
-const host = isDevelopment ? "http://localhost:3000" : "https://fabianveliz.com";
+
+import { HOST } from "Utils/constants";
 
 const PDF = ({ children }) => (
   <html style={{fontSize: '10px'}}>
@@ -11,7 +10,7 @@ const PDF = ({ children }) => (
       
       <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet" />
-      <link rel="stylesheet" href={`${host}/static/resume.css`} />
+      <link rel="stylesheet" href={`${HOST}/static/resume.css`} />
     </head>
     <body>
       {children}
