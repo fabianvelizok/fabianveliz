@@ -13,8 +13,10 @@ const Navbar = props => {
   const { className, router, ...rest } = props;
 
   const isResumePage = router && router.pathname === RESUME_PAGE_PATH;
+  const fitOnOnePage = router && router.query.fit === "true";
 
   const classes = classNames(['navbar', className]);
+  const resumeLink = `/resume?download=true&fit=${fitOnOnePage}`;
 
   return (
     <nav className={classes} {...pickHTMLProps(rest)}>
@@ -31,7 +33,7 @@ const Navbar = props => {
 
         {isResumePage && ( 
           <li className="navbar__list-item">
-            <a href="/resume?download=true" className="navbar__list-link" >
+            <a href={resumeLink} className="navbar__list-link" >
               Download PDF
             </a>
           </li>

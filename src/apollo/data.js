@@ -299,7 +299,7 @@ const data = {
       to: 'Present',
       title: 'Freelance Frontend Developer',
       description: `
-        <p>Translating mockups and designs into rich user experiences using technologies like React for building client side applications, Ruby on Rails and Python for server side and REST APIs to speak each other.</p>
+        <p>Translating mockups and designs into rich user interfaces using technologies like React for building client side applications, Ruby on Rails and Python for server side and REST APIs to speak each other.</p>
       `,
       logo: `${HOST}/static/fv-logo.png`,
       projects: [
@@ -328,7 +328,7 @@ const data = {
       title: 'Senior Web UI Developer at Globant',
       description: `
         <p>Responsible for building web user interfaces, defining application architecture and good practices, coding and testing components and doing code reviews (Key developer and technical referent).</p>
-        <p>Also, Involved in mentoring activities. I helped new globers to understand company's values, I guided them to improve their careers and get promoted by defining goals and working towards them.</p>
+        <p>Also, Involved in mentoring activities. I helped new globers to understand company's values. I guided them to improve their careers and get promoted by defining goals and working towards them.</p>
       `,
       logo: `${HOST}/static/globant-logo.png`,
       projects: [
@@ -374,7 +374,7 @@ const data = {
     {
       from: 'Nov 2013',
       to: 'May 2015',
-      title: 'Freelance Front-End & Back-End Developer at Insignia4u',
+      title: 'Front-End & Back-End Developer at Insignia4u',
       description: `
         <p>Worked mainly on the frontend side of several projects developing new features and fixing issues using technologies like: javascript, responsive design, CSS preprocessors, just to name a couple. I also worked on the backend side doing some Ruby on Rails code connecting with databases and writting code for admin panels.</p>
       `,

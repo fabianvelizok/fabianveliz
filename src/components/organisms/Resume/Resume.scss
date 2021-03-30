@@ -61,7 +61,10 @@
   }
 
   &__profile-title {
+    display: flex;
+    justify-content: space-between;
     margin-top: 0;
+    position: relative;
   }
 
   &__section-title {
@@ -152,6 +155,11 @@
     padding: 0 0 .5rem;
   }
 
+  &__projects-label,
+  &__technologies-label {
+    margin: .25rem 0;
+  }
+
   &__projects,
   &__technologies,
   &__courses {
@@ -187,6 +195,12 @@
         background-color: $oracle;
       }
     }
+  }
+
+  &__projects-wrapper,
+  &__technologies-wrapper {
+    display: flex;
+    flex-direction: column;
   }
   
   &__separator {
@@ -230,21 +244,38 @@
     .social-links__label--column {
       float: left;
     }
-  }
 
-  .resume__workExperience-header,
-  .resume__education-item {
-    overflow: hidden;
-  }
+    .resume__workExperience-header,
+    .resume__education-item {
+      overflow: hidden;
+    }
 
-  .resume__workExperience-left,
-  .resume__education-left {
-    float: left;
-  }
+    .resume__workExperience-left,
+    .resume__education-left {
+      float: left;
+    }
 
-  .resume__workExperience-right,
-  .resume__education-right {
-    float: right;
+    .resume__workExperience-right,
+    .resume__education-right {
+      float: right;
+    }
+
+    .resume__default-list--with-logo {
+      > li {
+        margin-bottom: 5px;
+        padding-left: 30px;
+      }
+
+      img {
+        height: 25px;
+        width: 25px;
+        border-radius: 25px;
+      }
+    }
+
+    .resume__section-title {
+      margin: .8rem 0;
+    }
   }
 }
 

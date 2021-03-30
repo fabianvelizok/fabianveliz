@@ -3,7 +3,6 @@ import { useQuery, gql } from "@apollo/client";
 import React from 'react';
 
 import { initializeApollo } from "Apollo/apolloClient";
-import { useApollo } from "Apollo/apolloClient";
 import componentToPDF from "Utils/componentToPDF";
 import PDF from 'Components/templates/PDF/PDF';
 import Resume from 'Components/organisms/Resume/Resume';
@@ -55,7 +54,12 @@ const ResumeQuery = gql`
 `;
 
 const ResumePage = (props) => {
-  const { data, error, loading } = props;
+  const {
+    data,
+    error,
+    loading,
+    shouldFitOnOnePage
+  } = props;
 
   // TODO: Move to a component
   if (error) {
@@ -67,11 +71,13 @@ const ResumePage = (props) => {
     return <div>Loading...</div>
   }
 
-  return <Resume data={data} />;
+  return <Resume data={data} shouldFitOnOnePage={shouldFitOnOnePage} />;
 };
 
 ResumePage.getInitialProps = async ({ req, res, query }) => {
   const exportPDF = query.download === 'true';
+  const shouldFitOnOnePage = query.fit === 'true';
+
   const isServer = !!req;
 
   // Workaround for SSR
@@ -83,7 +89,7 @@ ResumePage.getInitialProps = async ({ req, res, query }) => {
 
   if (isServer && exportPDF) {
     const buffer = await componentToPDF(
-      <PDF><Resume data={data} shouldRenderPDF /></PDF>
+      <PDF><Resume data={data} shouldFitOnOnePage={shouldFitOnOnePage} shouldRenderPDF /></PDF>
     );
 
     res.setHeader('Content-disposition', 'attachment; filename="Veliz Fabian\'s Resume.pdf');
@@ -91,7 +97,12 @@ ResumePage.getInitialProps = async ({ req, res, query }) => {
     res.end(buffer);
   }
 
-  return { data, error, loading };
+  return {
+    data,
+    error,
+    loading,
+    shouldFitOnOnePage
+  };
 }
 
 export default ResumePage;
