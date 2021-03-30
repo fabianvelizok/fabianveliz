@@ -23,7 +23,7 @@ const Hero = props => {
     <div className={classes} id="#hero" {...pickHTMLProps(rest)}>
       <Particles />
 
-      <Container className="hero__container">
+      <Container className="hero__container" small>
         <Avatar alt="Me" className="hero__photo" src={avatar} />
 
         <div className="hero__about">

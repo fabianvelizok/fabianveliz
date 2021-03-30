@@ -12,4 +12,10 @@
   a {
     color: $white;
   }
+
+  &--inverted {
+    a {
+      color: $black;
+    }
+  }
 }

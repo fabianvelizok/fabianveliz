@@ -6,6 +6,7 @@ import React from 'react';
 import Linkedin from 'Components/icons/Linkedin';
 import Email from 'Components/icons/Email';
 import Github from 'Components/icons/Github';
+import Website from 'Components/icons/Website';
 
 import './SocialLinks.scss';
 
@@ -13,6 +14,7 @@ const Icons = {
   email: Email,
   github: Github,
   linkedin: Linkedin,
+  website: Website
 };
 
 const SocialLinks = props => {

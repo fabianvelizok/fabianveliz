@@ -1,7 +1,7 @@
 import { pickHTMLProps } from 'pick-react-known-prop';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import AnimationFadeInDown from 'Components/atoms/AnimationFadeInDown/AnimationFadeInDown';
 import AnimationFadeInLeft from 'Components/atoms/AnimationFadeInLeft/AnimationFadeInLeft';
@@ -88,26 +88,65 @@ const Resume = props => {
           </div>
         </div>
         <div className="resume__right-column">
-          <h3 className="resume__section-title resume__section-title--inverted">Profile</h3>
+          <h3 className="resume__section-title resume__section-title--inverted resume__profile-title">Profile</h3>
           <AnimationFadeInRight animateInViewport={!shouldRenderPDF}>
             <RichText content={bio.short_profile} />
           </AnimationFadeInRight>
 
           <h3 className="resume__section-title resume__section-title--inverted">Work Experience</h3>
           <AnimationFadeInRight animateInViewport={!shouldRenderPDF}>
-            <ul className="resume__default-list">
+            <ul className="resume__default-list resume__default-list--with-logo">
               {workExperience.map(experience => {
                 return (
                   <li className="resume__workExperience-item" key={`${experience.from}${experience.to}`}>
+                    <img src={experience.logo} alt={experience.title} />
+                    
                     <div className="resume__workExperience-header">
                       <strong className="resume__workExperience-left">{experience.title}</strong>
-                      <div className="resume__workExperience-right">
+                      <strong className="resume__workExperience-right">
                         <span>{experience.from}</span>
                         <span className="resume__separator">-</span>
                         <span>{experience.to}</span>
+                      </strong>
+                    </div>
+
+                    <RichText content={experience.description} />
+
+                    <div>
+                      {experience.projects.length > 0 && (
+                        <div style={{display: 'flex', alignItems: 'center'}}>
+                          <span>Projects:</span>
+                          <ul className="resume__projects">
+                            {experience.projects.map(project => {
+                              return (
+                                <li className="resume__projects-item" key={project.name}>
+                                  {project.link ? (
+                                    <a className="resume__projects-link" href={project.link} rel="noopener noreferrer" target="_blank">
+                                      {project.name}
+                                    </a>
+                                  ) : (
+                                      <span className="resume__projects-link">{project.name}</span>
+                                    )}
+                                </li>
+                              );
+                            })}
+                          </ul>
+                        </div>
+                      )}
+
+                      <div style={{ display: 'flex', alignItems: 'center' }}>
+                        <span>Technologies:</span>
+                        <ul className="resume__technologies">
+                          {experience.technologies.map(technology => {
+                            return (
+                              <li className="resume__technologies-item resume__technologies-item--small" key={technology}>
+                                <span className="resume__technologies-link resume__technologies-link--small">{technology}</span>
+                              </li>
+                            );
+                          })}
+                        </ul>
                       </div>
                     </div>
-                    <RichText content={experience.description} />
                   </li>
                 );
               })}
@@ -116,19 +155,25 @@ const Resume = props => {
 
           <h3 className="resume__section-title resume__section-title--inverted">Education</h3>
           <AnimationFadeInRight animateInViewport={!shouldRenderPDF}>
-            <ul className="resume__default-list">
+            <ul className="resume__default-list resume__default-list--with-logo">
               {education.map(education => {
                 return (
                   <li key={`${education.from}${education.to}`}>
+                    <img src={education.logo} alt={education.title} />
+                    
                     <div className="resume__education-item">
                       <strong className="resume__education-left">{education.title}</strong>
                       <span className="resume__education-right">
-                        {education.from}
-                        <span className="resume__separator">-</span>
-                        {education.to}
+                        {education.from && education.to && (
+                          <Fragment>
+                            {education.from}
+                            <span className="resume__separator">-</span>
+                            {education.to}
+                          </Fragment>
+                        )}
                       </span>
                     </div>
-                    <RichText content={education.description} />
+                    <RichText content={education.description} inverted />
                   </li>
                 );
               })}

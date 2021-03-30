@@ -33,12 +33,19 @@ const ResumeQuery = gql`
       to
       title
       description
+      logo
+      projects {
+        name
+        link
+      }
+      technologies
     }
     education {
       from
       to
       title
       description
+      logo
     }
     languages {
       name

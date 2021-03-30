@@ -10,13 +10,13 @@ const data = {
       <p>Interested? Check out my <a href="/resume">Resume</a>.</p>
     `,
     short_profile:
-      '<p>Professional Web UI Developer with 8+ years of experience coding web applications, focusing on the front end side using technologies like: HTML5, CSS3, Javascript, React and Responsive Design, among others.</p><p>I really enjoy challenges and learning about new tools and technologies.</p>',
+      '<p>Professional Web UI Developer with 8+ years of experience coding web applications, focusing on the front end side using technologies like: HTML5, CSS3, Javascript, React, Webpack, Git and Responsive Design, among others.</p><p>Familiar with fast-paced environments and agile methodology.</p>',
     avatar: `${HOST}/static/me.jpeg`,
     socialLinks: [
       {
         key: 'website',
         label: 'Website',
-        link: 'https://fabieldev.com',
+        link: 'https://fabianveliz.herokuapp.com',
         target: '_blank',
       },
       {
@@ -45,17 +45,15 @@ const data = {
     'Javascript',
     'React',
     'React ecosystem',
-    'Web development',
+    'AngularJS/Angular',
     'Webpack',
-    'Responsive Design',
     'Node.js',
+    'Next.js',
     'Git',
     'SEO',
-    'Next.js',
-    'Flow',
-    'AngularJS/Angular',
-    'jQuery',
-    'Ruby on Rails',
+    'Responsive Design',
+    'Sass',
+    'Agile'
   ],
   courses: [
     {
@@ -301,78 +299,94 @@ const data = {
       to: 'Present',
       title: 'Freelance Frontend Developer',
       description: `
-        <p>Translate mockups to an interactive website. development, creation of features and functionalities and bug fixing.</p>
+        <p>Translating mockups and designs into rich user experiences using technologies like React for building client side applications, Ruby on Rails and Python for server side and REST APIs to speak each other.</p>
       `,
       logo: `${HOST}/static/fv-logo.png`,
       projects: [
-        { name: "HBO.com", link: "http://asdasd.com" }
+        { name: "Tucuman.gob.ar", link: "https://www.tucuman.gob.ar" },
+        { name: "Gaming Blog", link: null },
+        { name: "Prostock", link: "http://prostock.herokuapp.com" },
       ],
-      technologies: ['HTML5', 'CSS3', 'Javascript']
+      technologies: ['HTML5', 'CSS3', 'Javascript', 'React', 'Web3', 'Blockchain', 'Python', 'REST', 'Next.js', 'Hooks', 'Webpack', 'CSS Modules', 'SSR', 'Ruby on Rails', 'BEM', 'Responsive Design', 'Git', 'ESLint']
     },
     {
       from: 'Nov 2019',
       to: 'Dec 2020',
       title: 'Frontend Engineer Lead at HBO (Globant Contractor)',
       description: `
-        <p>Maintenance, analysis, development, creation of features and functionalities and bug fixing. Front End Team leader, mentor and technical referent. </p>
+        <p>Responsability includes collaborating with general Team Leader to handle frontend team by helping with project ramp-up and mentoring new coworkers, defining frontend architecture and improvements, making code reviews and improving quality code, estimating tasks and assigning to the right person, documenting processes and key features and participating in meetings with clients to help to build clean user interfaces, improve interactions and experiences.</p>
       `,
       logo: `${HOST}/static/hbo-logo.jpeg`,
-      projects: [],
-      technologies: ['HTML5', 'CSS3', 'Javascript']
+      projects: [
+        { name: "HBO", link: "https://hbo.com" }
+      ],
+      technologies: ['HTML5', 'CSS3', 'PostCSS', 'Javascript', 'Node.js', 'React', 'Hooks', 'Context', 'UT', 'Webpack', 'CSS Modules', 'SSR', 'Accessibility', 'ARCore', 'Docker', 'Jenkins', 'Responsive Design', 'Git', 'ESLint', 'Flow', 'Linux']
     },
     {
       from: 'Nov 2018',
       to: 'Dec 2020',
       title: 'Senior Web UI Developer at Globant',
       description: `
-        <p>I have been working on:</p>
-        <ul>
-          <li><p>Analysis, development, creation of features and functionalities and bug fixing.</p></li>
-          <li><p>Code scalability, maintenance, style and architecture improvements (Key developer and technical referent)</p></li>
-          <li><p>Mentoring: I have helped new Globers to understand Globant values, improve their careers and pass to the next step. I gave and received feedbacks to detect points to improve.</p></li>
-          <li><p>Start training to be a gatekeeper</p></li>
-        </ul>
+        <p>Responsible for building web user interfaces, defining application architecture and good practices, coding and testing components and doing code reviews (Key developer and technical referent).</p>
+        <p>Also, Involved in mentoring activities. I helped new globers to understand company's values, I guided them to improve their careers and get promoted by defining goals and working towards them.</p>
       `,
       logo: `${HOST}/static/globant-logo.png`,
-      projects: [],
-      technologies: ['HTML5', 'CSS3', 'Javascript']
+      projects: [
+        { name: "Hallmark Movies Now", link: "https://www.hmnow.com/" },
+        { name: "Globant", link: "https://globant.com" }
+      ],
+      technologies: ['HTML5', 'CSS3', 'Javascript', 'Node.js', 'React', 'Redux', 'UT', 'Webpack', 'Next.js', 'SSR', 'SEO', 'RxJS', 'Redux-Saga', 'Redux-Reselect', 'Immutable', 'Sass', 'BEM', 'Atomic Design', 'Responsive Design', 'Git', 'ESLint' ]
     },
     {
       from: 'Sep 2015',
       to: 'Nov 2018',
       title: 'Semi Senior Web UI Developer at Globant',
       description: `
-        <p>I was working on:</p>
-        <ul>
-          <li><p>Creation, development, analysis and implementation of new features and bug fixing.</p></li>
-          <li><p>Start as a mentor: Learn what mentoring is and have my first internal mentees.</p></li>
-        </ul>
+        <p>Responsible for transforming designs into responsive web pages and writing client-side application logic using external tools and browser APIs like, AngularJS, jQuery, Drag and Drop, Interactive Charts, WebSockets, among others.</p>
       `,
       logo: `${HOST}/static/globant-logo.png`,
-      projects: [],
-      technologies: ['HTML5', 'CSS3', 'Javascript']
+      projects: [
+        { name: "United Airlines" },
+        { name: "Handerr" },
+        { name: "OCA", link: "https://www.oca.com.ar" },
+        { name: "Grupo Rhuo" }
+      ],
+      technologies: ['HTML5', 'CSS3', 'Javascript', 'AngularJS', 'Webpack', 'Gulp', 'jQuery', 'Sass', 'Responsive Design', 'Git', 'GridstackJS', 'WebSockets']
     },
     {
       from: 'Jan 2015',
       to: 'Dec 2017',
       title: 'Freelance Front-End & Back-End Developer',
       description: `
-        <p>Freelance experience. I was mostly working on creation, development, analysis and implementation of new features and bug fixing.</p>
+        <p>Coding web and mobile interfaces using technologies like angularJS and Ionic for hybrid applications and Ruby on Rails for backend and administration side. Using WebSockets for building real time experiences.</p>
       `,
       logo: `${HOST}/static/fv-logo.png`,
-      projects: [],
-      technologies: ['HTML5', 'CSS3', 'Javascript']
+      projects: [
+        { name: "SimpleHSQE-Admin" },
+        { name: "SimpleHSQE-App" },
+        { name: "Famapp", link: "https://play.google.com/store/apps/details?id=com.nordecmedia.famailla&hl=es" },
+        { name: "Arevalo", link: "https://play.google.com/store/apps/details?id=com.ionicframework.arevalo820026&hl=es" },
+        { name: "Adput", link: "https://play.google.com/store/apps/details?id=com.lsprats.adput&hl=es" },
+        { name: "Farmacia america" },
+      ],
+      technologies: ['HTML', 'CSS', 'Javascript', 'Ruby on Rails', 'AngularJS', 'Ionic', 'WebSockets', 'Sass', 'Responsive Design', 'Heroku', 'Git', 'Material Design']
     },
     {
       from: 'Nov 2013',
       to: 'May 2015',
       title: 'Freelance Front-End & Back-End Developer at Insignia4u',
       description: `
-        <p>I was mostly working on creation, development, analysis and implementation of new features and bug fixing.</p>
+        <p>Worked mainly on the frontend side of several projects developing new features and fixing issues using technologies like: javascript, responsive design, CSS preprocessors, just to name a couple. I also worked on the backend side doing some Ruby on Rails code connecting with databases and writting code for admin panels.</p>
       `,
       logo: `${HOST}/static/i4u-logo.png`,
-      projects: [],
-      technologies: ['HTML5', 'CSS3', 'Javascript']
+      projects: [
+        { name: "Gugu Guru", link: "https://guguguru.com" },
+        { name: "Asbestos Answers", link: "http://www.asbestosanswers.com.au" },
+        { name: "La Gaceta", link: "https://www.lagaceta.com.ar" },
+        { name: "TuCancha" },
+        { name: "Tradeagrape" },
+      ],
+      technologies: ['HTML', 'CSS', 'Javascript', 'Ruby on Rails', 'AngularJS', 'Backbone', 'jQuery', 'Sass', 'Stylus', 'SMACSS', 'Responsive Design', 'Heroku', 'Git', 'Bootstrap']
     },
   ],
   education: [

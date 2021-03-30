@@ -60,6 +60,10 @@
     font-size: 1.25rem;
   }
 
+  &__profile-title {
+    margin-top: 0;
+  }
+
   &__section-title {
     border-bottom: 1px solid $white;
     padding-bottom: 0.1875rem;
@@ -95,6 +99,27 @@
         content: "-"
       }
     }
+
+    &--with-logo {      
+      > li {
+        margin-bottom: 8px;
+        overflow: hidden;
+        padding-left: 65px;
+
+        &:after {
+          display: none;
+        }
+      }
+
+      img {
+        height: 50px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 50px;
+        border-radius: 50px;
+      }
+    }
   }
 
   &__workExperience-item {
@@ -105,6 +130,10 @@
   &__education-item {
     display: flex;
     justify-content: space-between;
+    
+    @include media(phone-only) {    
+      flex-direction: column; 
+    }
   }
 
   &__skills {
@@ -123,25 +152,40 @@
     padding: 0 0 .5rem;
   }
 
+  &__projects,
+  &__technologies,
   &__courses {
     padding: 0;
     
     &-item {
       display: inline-block;
-      background-color: $tradewind;
-      margin: .25rem;
-
-      &:hover {
-        background-color: $oracle;
+      background-color: $paradiso;
+      margin: .15rem;
+      padding-left: 0 !important;
+      
+      &:after {
+        display: none;
+      }
+      
+      &--small {
+        background-color: $tradewind;
+        margin: 0.05rem;
       }
     }
     
     &-link {
       color: $white;
       display: block;
-      padding: .5rem;
+      padding: .2rem;
       text-decoration: none;
 
+      &--small {
+        padding: .1rem;
+      }
+      
+      &[href]:hover {
+        background-color: $oracle;
+      }
     }
   }
   

@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const Email = props => {
+const Github = props => {
   const { className, ...rest } = props;
 
   const classes = classNames(className);
@@ -13,12 +13,12 @@ const Email = props => {
   );
 };
 
-Email.propTypes = {
+Github.propTypes = {
   className: PropTypes.string,
 };
 
-Email.defaultProps = {
+Github.defaultProps = {
   className: undefined,
 };
 
-export default Email;
+export default Github;
