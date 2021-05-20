@@ -24,7 +24,7 @@
     "apollo-server-micro": "^2.19.1",
     "classnames": "^2.2.6",
     "graphql": "^15.4.0",
-    "html-pdf": "^2.2.0",
+    "html-pdf": "^3.0.1",
     "next": "^10.0.5",
     "node-sass": "^4.13.1",
     "pick-react-known-prop": "^0.1.5",
