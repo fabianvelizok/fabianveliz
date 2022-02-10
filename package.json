@@ -26,7 +26,7 @@
     "graphql": "^15.4.0",
     "html-pdf": "^2.2.0",
     "next": "^10.0.5",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "pick-react-known-prop": "^0.1.5",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
