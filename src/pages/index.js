@@ -37,7 +37,7 @@ const Home = props => {
   if (error) {
     return <div>Error... Oops!</div>
   }
-  
+
   // TODO: Move to a component
   if (loading) {
     return <div>Loading...</div>

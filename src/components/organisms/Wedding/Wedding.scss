@@ -1,0 +1,52 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/tools/mixins.scss';
+
+.wedding {
+  color: black;
+  text-align: center;
+
+  &__steps {
+    position: relative;
+
+    &__content {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &__step-1 {
+    &__photo-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__us,
+    &__flowers {
+      max-width: 100%;
+      width: 400px;
+    }
+
+    &__flowers {
+      z-index: 1;
+      position: relative;
+    }
+
+    &__us {
+      position: absolute;
+    }
+  }
+
+  &__step-2 {
+    background-color: #fafafa;
+  }
+
+  &__step-3 {
+    background-color: gray;
+  }
+  
+  &__step-4 {
+    background-color: #fafafa;
+  }
+}
