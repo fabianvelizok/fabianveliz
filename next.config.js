@@ -1,9 +1,4 @@
-const withSass = require('@zeit/next-sass');
+/** @type {import('next').NextConfig} */
+const nextConfig = {}
 
-const config = {
-  env: {
-    ID_GOOGLE_TAG_MANAGER: process.env.ID_GOOGLE_TAG_MANAGER,
-  },
-};
-
-module.exports = withSass(config);
+module.exports = nextConfig
