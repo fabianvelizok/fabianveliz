@@ -1,0 +1,22 @@
+.container {
+  margin: auto;
+  max-width: 1280px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.fullMobile {
+  /* @include media(phone-only) {
+    padding-left: 0;
+    padding-right: 0;
+  } */
+}
+
+.noPadding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.small {
+  max-width: 580px;
+}

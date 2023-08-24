@@ -1,0 +1,18 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.listItem {
+  padding: .5rem;
+  padding-left: 0;
+}
+
+.anchor {
+  color: white;
+  text-decoration: none;
+  transition: font-size 0.5s ease-in-out;
+}
