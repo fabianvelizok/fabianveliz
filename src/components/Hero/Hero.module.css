@@ -1,0 +1,45 @@
+.hero {
+  position: relative;
+  background-color: var(--pickled-bluewood);
+  text-align: center;
+}
+
+  /* &__particles {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+ */
+
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+.about {
+  display: flex;
+}
+
+.about,
+.photo {
+  margin-bottom: 2rem;
+}
+
+.information {
+  text-align: left;
+  margin-right: 2rem;
+  color: white;
+}
+
+.information p {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+.talk {
+  display: block;
+  text-align: center;
+  margin-bottom: .5rem;
+}

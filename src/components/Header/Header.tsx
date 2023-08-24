@@ -5,7 +5,6 @@ import classNames from 'classnames';
 import Container from '../Container/Container';
 import Logo from '../Logo/Logo';
 import Navbar from '../Navbar/Navbar';
-
 import styles from './Header.module.css';
 
 export interface HeaderProps {

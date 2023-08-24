@@ -5,13 +5,12 @@ const data = {
     name: 'Fabián Horacio Veliz',
     tagline: 'FrontEnd Developer',
     full_profile: `
-      <p>Professional Web UI Developer with 8+ years of experience coding web applications, focusing on the front end side using technologies like: HTML5, CSS3, Javascript, React and Responsive Design, among others.</p>
+      <p>Professional Web UI Developer with more than 10 years of experience coding web applications, focusing on the front end side using technologies like: HTML5, CSS3, Javascript, Typescript, React, Webpack, Git and Responsive Design, among others.</p>
       <p>I am ready to face new challenges in my career.</p>
-      <p>Interested? Check out my <a href="/resume">Resume</a>.</p>
     `,
     short_profile:
       '<p>Professional Web UI Developer with 8+ years of experience coding web applications, focusing on the front end side using technologies like: HTML5, CSS3, Javascript, React, Webpack, Git and Responsive Design, among others.</p><p>Familiar with fast-paced environments and agile methodology.</p>',
-    avatar: `${HOST}/static/me.jpeg`,
+    avatar: `${HOST}/me.jpeg`,
     socialLinks: [
       {
         key: 'website',
@@ -301,7 +300,7 @@ const data = {
       description: `
         <p>Translating mockups and designs into rich user interfaces using technologies like React for building client side applications, Ruby on Rails and Python for server side and REST APIs to speak each other.</p>
       `,
-      logo: `${HOST}/static/fv-logo.png`,
+      logo: `${HOST}/fv-logo.png`,
       projects: [
         { name: "Tucuman.gob.ar", link: "https://www.tucuman.gob.ar" },
         { name: "Gaming Blog", link: null },
@@ -316,7 +315,7 @@ const data = {
       description: `
         <p>Responsability includes collaborating with general Team Leader to handle frontend team by helping with project ramp-up and mentoring new coworkers, defining frontend architecture and improvements, making code reviews and improving quality code, estimating tasks and assigning to the right person, documenting processes and key features and participating in meetings with clients to help to build clean user interfaces, improve interactions and experiences.</p>
       `,
-      logo: `${HOST}/static/hbo-logo.jpeg`,
+      logo: `${HOST}/hbo-logo.jpeg`,
       projects: [
         { name: "HBO", link: "https://hbo.com" }
       ],
@@ -330,7 +329,7 @@ const data = {
         <p>Responsible for building web user interfaces, defining application architecture and good practices, coding and testing components and doing code reviews (Key developer and technical referent).</p>
         <p>Also, Involved in mentoring activities. I helped new globers to understand company's values. I guided them to improve their careers and get promoted by defining goals and working towards them.</p>
       `,
-      logo: `${HOST}/static/globant-logo.png`,
+      logo: `${HOST}/globant-logo.png`,
       projects: [
         { name: "Hallmark Movies Now", link: "https://www.hmnow.com/" },
         { name: "Globant", link: "https://globant.com" }
@@ -344,7 +343,7 @@ const data = {
       description: `
         <p>Responsible for transforming designs into responsive web pages and writing client-side application logic using external tools and browser APIs like, AngularJS, jQuery, Drag and Drop, Interactive Charts, WebSockets, among others.</p>
       `,
-      logo: `${HOST}/static/globant-logo.png`,
+      logo: `${HOST}/globant-logo.png`,
       projects: [
         { name: "United Airlines" },
         { name: "Handerr" },
@@ -360,7 +359,7 @@ const data = {
       description: `
         <p>Coding web and mobile interfaces using technologies like angularJS and Ionic for hybrid applications and Ruby on Rails for backend and administration side. Using WebSockets for building real time experiences.</p>
       `,
-      logo: `${HOST}/static/fv-logo.png`,
+      logo: `${HOST}/fv-logo.png`,
       projects: [
         { name: "SimpleHSQE-Admin" },
         { name: "SimpleHSQE-App" },
@@ -378,7 +377,7 @@ const data = {
       description: `
         <p>Worked mainly on the frontend side of several projects developing new features and fixing issues using technologies like: javascript, responsive design, CSS preprocessors, just to name a couple. I also worked on the backend side doing some Ruby on Rails code connecting with databases and writting code for admin panels.</p>
       `,
-      logo: `${HOST}/static/i4u-logo.png`,
+      logo: `${HOST}/i4u-logo.png`,
       projects: [
         { name: "Gugu Guru", link: "https://guguguru.com" },
         { name: "Asbestos Answers", link: "http://www.asbestosanswers.com.au" },
@@ -395,28 +394,28 @@ const data = {
       to: '2024',
       title: 'Universidad Tecnológica Nacional (UTN-FRT)',
       description: 'I am currently pursuing a degree in Information Systems Engineering.',
-      logo: `${HOST}/static/utn-logo.jpeg`,
+      logo: `${HOST}/utn-logo.jpeg`,
     },
     {
       from: '',
       to: '',
       title: 'Platzi',
       description: 'I completed successfully 3 careers: Frontend with React.js, Frontend Architecture and Backend development with Javascript. Check out my <a href="https://platzi.com/@fabianvelizok" target="_blank">Profile</a>.',
-      logo: `${HOST}/static/platzi-logo.jpeg`,
+      logo: `${HOST}/platzi-logo.jpeg`,
     },
     {
       from: '',
       to: '',
       title: 'Acámica',
       description: 'I completed successfully 3 careers: Frontend development, Backend development and Web development, which was a combination of the 2 previous mentioned careers. Check out my <a href="https://globant.acamica.com/@fabianV" target="_blank">Profile</a>.',
-      logo: `${HOST}/static/acamica-logo.png`,
+      logo: `${HOST}/acamica-logo.png`,
     },
     {
       from: '',
       to: '',
       title: 'Udemy',
       description: 'I completed several advanced courses related to Frontend Development. Check out my <a href="https://www.udemy.com/user/fabian-veliz-4" target="_blank">Profile</a>.',
-      logo: `${HOST}/static/udemy-logo.jpeg`,
+      logo: `${HOST}/udemy-logo.jpeg`,
     },
   ],
   languages: [
