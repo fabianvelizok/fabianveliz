@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import Image from 'next/image';
 import React from 'react';
 import styles from './Avatar.module.css';
 
@@ -11,7 +12,15 @@ export interface AvatarProps {
 const Avatar = (props: AvatarProps) => {
   const { alt, className, src, ...rest } = props;
 
-  return <img alt={alt} className={classNames([styles.avatar, className])} src={src} />;
+  return (
+    <Image
+      alt={alt}
+      className={classNames(styles.avatar, className)}
+      height={150}
+      src={src}
+      width={150}
+    />
+  )
 };
 
 export default Avatar;

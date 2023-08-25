@@ -1,7 +1,4 @@
 .avatar {
-  --size-photo: 150px;
-  border-radius: var(--size-photo);
+  border-radius: 50%;
   border: 5px solid var(--cyprus);
-  height: var(--size-photo);
-  width: var(--size-photo);
 }
