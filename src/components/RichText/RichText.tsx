@@ -1,5 +1,4 @@
-import classNames from 'classnames';
-import React from 'react';
+import { clsx } from 'clsx';
 import styles from './RichText.module.css';
 
 export interface RichTextProps {
@@ -12,7 +11,7 @@ const RichText = (props: RichTextProps) => {
 
   return (
     <div
-      className={classNames(styles.richText, className, {
+      className={clsx(styles.richText, className, {
         [styles.inverted]: inverted
       })}
       dangerouslySetInnerHTML={{ __html: content }}

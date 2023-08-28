@@ -1,21 +1,18 @@
-import classNames from 'classnames';
-import React from 'react';
+import { clsx } from 'clsx';
 import Avatar from '../Avatar/Avatar';
 import Container from '../Container/Container';
 import RichText from '../RichText/RichText';
-
+import SocialLinks from '../SocialLinks/SocialLinks';
+import { SocialLinkKey } from '../../types/shared';
 // TODO: Check if they're necessary
 // import Particles from 'Components/atoms/Particles/Particles';
-// import SocialLinks from 'Components/atoms/SocialLinks/SocialLinks';
-
 import styles from './Hero.module.css';
-
 
 export interface HeroProps {
   className?: string;
   avatar: string;
   links: Array<{
-    key: string;
+    key: SocialLinkKey;
     label: string;
     link: string;
     target: string;
@@ -26,7 +23,7 @@ export interface HeroProps {
 const Hero = (props: HeroProps) => {
   const { avatar, className, links, profile} = props;
 
-  const classes = classNames([styles.hero, className]);
+  const classes = clsx(styles.hero, className);
 
   return (
     <div className={classes} id="#hero">
@@ -50,7 +47,7 @@ const Hero = (props: HeroProps) => {
 
         {/* <AnimationPulse className={styles.talk}>Let's talk</AnimationPulse> */}
 
-        {/* <SocialLinks links={links} /> */}
+        <SocialLinks links={links} layout="row"/>
       </Container>
     </div>
   );

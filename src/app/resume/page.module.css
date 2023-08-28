@@ -1,0 +1,45 @@
+.resume {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  overflow: hidden;
+}
+
+.leftColumn,
+.rightColumn {
+  padding: 1rem;
+  padding-top: 5rem;
+}
+
+.leftColumn {
+  background-color: var(--pickled-bluewood);
+  position: relative;
+}
+
+.leftColumnContent {
+  position: relative;
+  z-index: 1;
+}
+
+.rightColumn {
+  background-color: #f1f1f1;
+  color: var(--cyprus);
+}
+
+.avatar {
+  display: block;
+  margin: auto;
+}
+
+.name,
+.title {
+  text-align: center;
+}
+
+.name {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+
+.title {
+  font-size: 1.25rem;
+}

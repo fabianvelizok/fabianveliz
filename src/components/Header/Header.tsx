@@ -1,7 +1,7 @@
 'use client';
 
-import React, { useCallback, useEffect, useState } from 'react';
-import classNames from 'classnames';
+import { useCallback, useEffect, useState } from 'react';
+import { clsx } from 'clsx';
 import Container from '../Container/Container';
 import Logo from '../Logo/Logo';
 import Navbar from '../Navbar/Navbar';
@@ -15,7 +15,7 @@ const Header = (props: HeaderProps) => {
   const { className } = props;
   const [ shouldCompact, setShouldCompact] = useState(false);
 
-  const classes = classNames(styles.header, className, {
+  const classes = clsx(styles.header, className, {
     [styles.compact]: shouldCompact,
   });
 
@@ -35,7 +35,7 @@ const Header = (props: HeaderProps) => {
     <header className={classes}>
       <Container className={styles.content}>
         <Logo
-          className={classNames({ [styles.compactLogo]: shouldCompact })}
+          className={clsx({ [styles.compactLogo]: shouldCompact })}
         />
 
         <Navbar />

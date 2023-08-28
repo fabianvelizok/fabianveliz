@@ -1,5 +1,4 @@
-import React from 'react';
-import classNames from 'classnames';
+import { clsx } from 'clsx';
 import Container from '../Container/Container';
 import Logo from '../Logo/Logo';
 import styles from './Footer.module.css';
@@ -12,7 +11,7 @@ const Footer = (props: FooterProps) => {
   const { className } = props;
 
   return (
-    <footer className={classNames(styles.footer, className)}>
+    <footer className={clsx(styles.footer, className)}>
       <Container className={styles.content}>
         <Logo className={styles.logo} />
 

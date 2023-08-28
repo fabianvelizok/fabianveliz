@@ -1,5 +1,4 @@
-import React from 'react';
-import classNames from 'classnames';
+import { clsx } from 'clsx';
 import Link from 'next/link'
 import styles from './Logo.module.css';
 
@@ -11,7 +10,7 @@ const Logo = (props: LogoProps) => {
   const { className } = props;
 
   return (
-    <Link href="/" className={classNames(styles.logo, className)}>
+    <Link href="/" className={clsx(styles.logo, className)}>
       <span className={styles.caret}>{'<'}</span>
       <span className={styles.name}>FV </span>
       <span className={styles.caret}>{'/>'}</span>

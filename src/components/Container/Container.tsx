@@ -1,5 +1,4 @@
-import React from 'react';
-import classNames from 'classnames';
+import { clsx } from 'clsx';
 import styles from './Container.module.css';
 
 export interface ContainerProps {
@@ -13,7 +12,7 @@ export interface ContainerProps {
 const Container = (props: ContainerProps) => {
   const { children, className, fullInMobile, noPadding, small } = props;
 
-  const classes = classNames(styles.container, className, {
+  const classes = clsx(styles.container, className, {
     [styles.fullMobile]: fullInMobile,
     [styles.noPadding]: noPadding,
     [styles.small]: small

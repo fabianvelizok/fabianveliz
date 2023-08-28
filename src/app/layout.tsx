@@ -1,5 +1,5 @@
 import './globals.css'
-import classNames from 'classnames';
+import { clsx } from 'clsx';
 import { Inter } from 'next/font/google'
 import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
@@ -9,7 +9,7 @@ import type { Metadata } from 'next'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Fabian Veliz',
+  title: 'Fabian Horacio Veliz',
   description: 'Personal portfolio',
 }
 
@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={classNames(inter.className, styles.page)}>
+      <body className={clsx(inter.className, styles.page)}>
         <Header />
         <main className={styles.content}>
           {children}

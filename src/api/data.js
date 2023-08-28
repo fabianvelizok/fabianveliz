@@ -1,13 +1,16 @@
 const data = {
   bio: {
-    name: 'Fabián Horacio Veliz',
-    tagline: 'FrontEnd Developer',
+    name: 'Fabian Horacio Veliz',
+    tagline: 'Senior Front-End Developer',
     full_profile: `
       <p>Professional Web UI Developer with more than 10 years of experience coding web applications, focusing on the front end side using technologies like: HTML5, CSS3, Javascript, Typescript, React, Webpack, Git and Responsive Design, among others.</p>
+      <p>Familiar with fast-paced environments and agile methodology.</p>
       <p>I am ready to face new challenges in my career.</p>
     `,
-    short_profile:
-      '<p>Professional Web UI Developer with 8+ years of experience coding web applications, focusing on the front end side using technologies like: HTML5, CSS3, Javascript, React, Webpack, Git and Responsive Design, among others.</p><p>Familiar with fast-paced environments and agile methodology.</p>',
+    short_profile: `
+      <p>Professional Web UI Developer with more than 10 years of experience coding web applications, focusing on the front end side using technologies like: HTML5, CSS3, Javascript, Typescript, React, Webpack, Git and Responsive Design, among others.</p>
+      <p>Familiar with fast-paced environments and agile methodology.</p>
+    `,
     avatar: `/images/me.jpeg`,
     socialLinks: [
       {
@@ -37,19 +40,16 @@ const data = {
     ],
   },
   skills: [
-    'HTML5',
-    'CSS3',
     'Javascript',
+    'Typescript',
     'React',
-    'React ecosystem',
-    'AngularJS/Angular',
+    'HTML & CSS',
     'Webpack',
-    'Node.js',
+    'Node',
     'Next.js',
     'Git',
     'SEO',
     'Responsive Design',
-    'Sass',
     'Agile'
   ],
   courses: [
